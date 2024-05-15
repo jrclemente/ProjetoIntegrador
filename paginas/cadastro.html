@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="/estilos/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="\imagens\Manaca3.jpg" alt="Logo marca óleo esseciais manacá colorida" srcset="">
+        </div>
+        <h1>Óleos Essenciais Manacá</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="..\index.html">Página Inicial</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="login.html">Minha Conta</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="privacidade.html">Política de Privacidade</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <hr>
+        <!--FORMULÁRIO DE CADASTRO-->
+        <div id="idCadastro">
+            <img src="\imagens\3917361.png" alt="Logo marca óleo esseciais manacá colorida" srcset="">
+            <h1>Meu Cadastro</h1>
+            <span>Os campos com (*) são de preenchimento obrigatório e essenciais para o processarmos o envio de seu
+                futuro.</span>
+            <div id="idTipoPessoa">
+                <input type="radio" checked name="tipoPessoa" value="F" /> Pessoa Física
+                <input type="radio" name="tipoPessoa" value="J" /> Pessoa Jurídica
+            </div>
+            <!--  -->
+            <form action="#" method="post">
+                <p>
+                    <label for="nome_cad">* Nome Completo</label>
+                    <input id="nome_cad" name="nome_cad" required pattern="[A-Za-z ']{4,}" type="text"
+                        placeholder="Nome e sobrenome" minlength="4" maxlength="30" size="35" />
+                </p>
+                <!--  -->
+                <p>
+                    <label for="cpf_cad">* CPF</label>
+                    <input type="text" required name="cpf_cad" id="cpf_cad" placeholder="999.999.999-99"
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" minlength="14" maxlength="14" size="10">
+                </p>
+                <!--  -->
+                <p>
+                    <label for="data_nasc_cad">* Data Nascimento</label>
+                    <input type="date" required name="data_nasc_cad" id="data_nasc_cad">
+                </p>
+                <!--  -->
+                <p>
+                    <label for="sexo_Cad">* Sexo</label>
+                    <select name="sexo_cad" required>
+                        <option value="F">Feminino</option>
+                        <option value="M">Masculino</option>
+                        <option value="N">Não informado</option>
+                        <option value="V" selected></option>
+                    </select>
+                </p>
+                <!--  -->
+                <p>
+                    <label for="tel_cad">Telefone</label>
+                    <input type="text" name="tel_cad" id="tel_cad" placeholder="99 9999 9999" minlength="13"
+                        maxlength="13" size="13" pattern="^\d{2}-\d{4}-\d{4}$">
+                </p>
+                <!--  -->
+                <p>
+                    <label for="cel_cad">* Celular</label>
+                    <input type="text" name="cel_cad" id="cel_cad" placeholder="99 9 9999 9999" minlength="14"
+                        maxlength="14" size="14" pattern="^\([1-9]{2}\) [9]{0,1}[6-9]{1}[0-9]{3}\-[0-9]{4}$">
+                </p>
+                <!--  -->
+                <p>
+                    <label for="email_cad">* E-mail</label>
+                    <input type="email" name="email_cad" id="email_cad" required size="40">
+                </p>
+                <!--  -->
+                <p>
+                    <label for="senha_Cad">* Senha</label>
+                    <input type="password" name="senha_Cad" id="senha_Cad" minlength="8" maxlength="20" required
+                        size="25">
+                </p>
+                <!--  -->
+                <p>
+                    <label for="senhaConfir_Cad">* Confirme a Senha</label>
+                    <input type="password" name="senhaConfir_Cad" id="senhaConfir_Cad" minlength="8" maxlength="20"
+                        required size="25">
+                </p>
+                <!--  -->
+                <div id="idOferta">
+                    <input type="checkbox" id="idOferta" name="Oferta" />
+                    <label for="idOferta">Receber ofertas por e-mail da nossa loja</label>
+                </div>
+        </div>
+        <!--FORMULÁRIO DE ENDERECO-->
+        <div id="idEndereco">
+            <hr>
+            <img src="\imagens\3916862.png" alt="Logo marca óleo esseciais manacá colorida" srcset="">
+            <h1>Endereço</h1>
+            <p>Os campos com (*) são de preenchimento obrigatório e essenciais para o processarmos o envio de seu
+                futuro.</p>
+            <!--  -->
+            <p>
+                <label for="cep_Cad">* CEP</label>
+                <input type="text" name="cep_Cad" id="cep_Cad" required minlength="9" maxlength="9" size="10"
+                    pattern="\d{5}-\d{3}">
+            </p>
+            <!--  -->
+            <p>
+                <label for="tipoEnd_Cad">* Tipo Logradouro</label>
+                <select name="tipoEnd_Cad" required>
+                    <option value="Rua" selected>Rua</option>
+                    <option value="Avenida">Avenida</option>
+                    <option value="Beco">Beco</option>
+                    <option value="Vila">Vila</option>
+                    <option value="Viela">Viela</option>
+                    <option value="Comunidade">Comunidade</option>
+                    <option value="Alameda">Alameda</option>
+                    <option value="Praca">Praça</option>
+                    <option value="Loteamento">Loteamento</option>
+                    <option value="Conjunto">Conjunto</option>
+                    <option value="Nao">Não Informado</option>
+                </select>
+            </p>
+            <!--  -->
+            <p>
+                <label for="logradouro_Cad">* Logradouro</label>
+                <input type="text" name="logradouro_Cad" id="logradouro_Cad" required minlength="5" maxlength="50"
+                    size="50">
+            </p>
+            <!--  -->
+            <p>
+                <label for="numero_Cad">* Número</label>
+                <input type="text" name="numero_Cad" id="numero_Cad" maxlength="10">
+            </p>
+            <!--  -->
+            <p>
+                <label for="compl_Cad">Complemento</label>
+                <input type="text" name="compl_Cad" id="compl_Cad" maxlength="10">
+            </p>
+            <!--  -->
+            <p>
+                <label for="bairro_Cad">* Bairro</label>
+                <input type="text" name="bairro_Cad" id="bairro_Cad" required minlength="5" maxlength="30" size="30">
+            </p>
+            <!--  -->
+            <p>
+                <label for="cidade_Cad">* Cidade</label>
+                <input type="text" name="cidade_Cad" id="cidade_Cad" required>
+            </p>
+            <!--  -->
+            <p>
+                <label for="estado_Cad">* Estado</label>
+                <select name="estado_Cad" required>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="PR">Parana</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="V" selected></option>
+                </select>
+            </p>
+            <!--  -->
+            <label for="pontoRef_cad">Ponto de Referência</label>
+            <textarea id="pontoRef_cad" name="pontoRef_cad" rows="4" cols="33" maxlength="100"></textarea>
+        </div>
+        <div id="idEnviar">
+            <input type="submit">
+            <!-- <button type='submit'>Enviar</button> -->
+        </div>
+        </form>
+    </main>
+
+    <footer>
+        <div>
+            <ul>
+                <li><a href="#">Condições de Uso</a></li>
+                <li><a href="#">Notificação de Privacidade</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Anúncios Baseados em Interesses</a></li>
+            </ul>
+        </div>
+        <p id="anoHoje">&copy; 2024 Todos os direitos reservados</p>
+    </footer>
+</body>
+
+</html>
