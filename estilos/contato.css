@@ -1,0 +1,69 @@
+/* CSS reset(reiniciar) */
+*,
+*:before,
+*:after {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contato-principal h2 {
+    text-align: center;
+}
+
+.contato-email {
+    display: flex;
+    width: 30%;
+    /* isso se faz necessário, uma vez o display passa a ser flexível e não mais em bloco */
+    padding: 30px;
+    /* position: absolute;  */
+    border: 1px solid rgba(9, 218, 30, 0.847);
+}
+
+.contato-email label {
+    color: rgb(29, 162, 193);
+    /* O elemento abaixo será incluido para ser específico para o label */
+    /* font-family: Arial,sans-serif; */
+
+}
+
+.contato-botao {
+    position: relative;
+}
+
+/*
+Estilo do botão submit/reset
+Aplicação de estilo através do atributo de um elemento(tag)
+*/
+input[type="submit"],
+input[type="reset"] {
+    width: 30% !important;
+    cursor: pointer;
+    background: rgb(61, 157, 179);
+    padding: 8px 5px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px #333;
+
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    /* transition: all 0.5s linear; */
+    transition: all 0.3s ease;
+
+    /* Faz com que os botões fiquem um ao lado do outro */
+    float: left;
+    margin-left: 10%;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+}
+
+/* Aplicação de estilo através do atributo de um elemento(tag) */
+input[type="submit"]:hover {
+    background: #4ab3c6;
+}
+
+input[type="reset"]:hover {
+    background: #4ab3c6;
+}

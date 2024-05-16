@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
+    <link rel="icon" type="image/png" href="\publico\favicon\profile.png">
     <link rel="stylesheet" type="text/css" href="/estilos/styles.css">
+    <link rel="stylesheet" type="text/css" href="/estilos/contato.css">
 </head>
 
 <body>
@@ -27,9 +29,50 @@
         </nav>
     </header>
 
-    <main>
+    <main class="contato-principal">
         <!-- Conteúdo da página será carregado aqui -->
-        <h1>Página em construção....</h1>
+        <section>
+            <h2>Entre em Contato Conosco</h2>
+            <p>Se tiver alguma dúvida ou precisar de mais informações, não hesite em nos contatar.</p>
+            <p>Telefone: (99) 9999-9999</p>
+            <br>
+        </section>
+
+        <div class="contato-email">
+            <form class="contato-form" action="EnvioContato" method="POST" enctype="text/plain">
+                <p>
+                    <label for="contatoNome">Nome</label>
+                    <input type="text" required name="contatoNome" id="contatoNome"
+                        placeholder="Informe nome e sobrenome">
+                </p>
+                <p>
+                    <label for="contatoEmail">E-mail</label>
+                    <input type="email" required name="contatoEmail" id="contatoEmail">
+                </p>
+                <p>
+                    <label for="contatoMensagem">Mensagem</label>
+                    <textarea id="contatoMensagem" required name="contatoMensagem" rows="5" cols="35"
+                        maxlength="150"></textarea>
+                </p>
+                <div class="contato-botao">
+                    <div id="idEnviar">
+                        <input type="submit" value="Enviar">
+                        <!-- <button type='submit'>Enviar</button> -->
+                    </div>
+                    <div id="idLimpar">
+                        <input type="reset" value="Limpar">
+                        <!-- <button type='submit'>Enviar</button> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="contato-whatsapp">
+            <a class="whatsapp" href="https://wa.me/5531999999999" target="_blank">
+                <img class="idimgwtsapp" src="../imagens//DSxOAUB0raA.png" alt="Imagem com o ícone oficial do WhatsApp"
+                    width="100px">
+                <!-- <img src="../imagens//whatsapp.png" alt="Imagem com o ícone oficial do WhatsApp" width="80px"> -->
+            </a>
+        </div>
     </main>
 
     <footer>

@@ -79,7 +79,6 @@ li {
     margin: 10px;
 }
 
-
 footer {
     border: 1px solid rgba(9, 218, 30, 0.847);
     background-color: #010101;
@@ -100,10 +99,19 @@ footer {
     background-color: var(--cor-primaria);
     text-decoration: none;
     cursor: pointer;
-    transition: .3s;
+    transition: all 0.3s ease;
     border-radius: 5px;
 }
 
 .btn-verProduto:hover {
     background-color: var(--cor-segundaria);
+}
+
+/* Controle WhatsApp */
+.whatsapp:hover{
+    background-color: transparent;
+    border:transparent
+}
+.idimgwtsapp:hover{
+    transform: scale(0.9);
 }
