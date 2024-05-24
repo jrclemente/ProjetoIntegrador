@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<!-- SE ATENTEM AO FATO DE QUE AQUI ABAIXO DEVE SER SEMPRE pt-BR, PESSOAL. pt-br ESTÁ INCORRETO... -->
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +13,8 @@
 
 <body>
     <header>
+        <!-- UTILIZEM A TAG FIGURE OU PICTURE PARA ENGLOBAR AS IMAGENS, QUANDO NECESSÁRIO.
+        DIV NÃO É UMA TAG SEMÂNTICA. -->
         <div class="logo">
             <img src="\imagens\Manaca3.jpg" alt="Logo marca óleo esseciais manacá colorida" srcset="">
         </div>
@@ -29,13 +32,14 @@
         </nav>
     </header>
     <main>
+        <!-- POR BOA PRÁTICA, OPTEM PELO USO DE NOMES DE CLASSES E IDS EM INGLÊS, PESSOAL! -->
         <section class="secao4" id="sobre">
             <!-- Conteúdo da página será carregado aqui -->
-            
+            <!-- SUGIRO QUE UTILIZEM UMA DIV AQUI ABAIXO. SECTION ENGLOBANDO SECTION ESTÁ INCORRETO. -->
             <section>
                 <!-- Introdução breve da página -->
                 <h2>Óleos Essenciais</h2>
-                <br>
+                <br> <!-- NÃO HÁ NECESSIDADE DE USAR <br> AQUI. -->
                 <article>
                     Bem-vindos ao Manacá, o maior e-commerce de óleos essenciais
                     da América Latina! Encontre produtos de qualidade e excelência
@@ -43,10 +47,11 @@
                 </article>
             </section>
 
-            <br>
+            <br> <!-- NÃO HÁ NECESSIDADE DE USAR <br> AQUI. -->
 
+            <!-- OPTEM PELO USO DA DIV AQUI EMBAIXO. -->
             <section>
-                <h3>Veja algumas de nossas seleções</h3>
+                <h3>Veja algumas de nossas seleções</h3> <!-- OPTEM POR USAR <p> AQUI EM VEZ DE H3. -->
             </section>
             
             <div class="secao4-div">
@@ -61,6 +66,7 @@
                         dermatites, estrias e cicatrizes.
                         É muito indicado para peles maduras, ressecadas e envelhecidas.
                     </article>
+                    <!-- PORQUE O USO DE BUTTON DENTRO DE <a>?! -->
                     <a href="paginas\produto.html"><button class="btn-verProduto">VER PRODUTO</button></a>
                 </div>
 
@@ -108,6 +114,7 @@
                     </article>
                     <a href="paginas\produto.html"><button class="btn-verProduto">VER PRODUTO</button></a>
                 </div>
+                
                 <!-- Card 5 -->
                 <div class="secao4-div-card">
                     <img decoding="async" src="../imagens/IMG-20240422-WA0016.jpg" alt="imagem do card 5">

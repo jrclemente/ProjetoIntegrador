@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- SE ATENTEM AO FATO DE QUE AQUI ABAIXO DEVE SER SEMPRE pt-BR, PESSOAL. pt-br ESTÁ INCORRETO... -->
 <html lang="pt-br">
 
 <head>
@@ -11,6 +12,7 @@
 
 <body>
     <header>
+        <!-- VERIFICAR OS APONTAMENTOS FEITOS NA PÁGINA INDEX.HTML PRA QUESTÃO ABAIXO. -->
         <div class="logo">
             <img src="\imagens\Manaca3.jpg" alt="Logo marca óleo esseciais manacá colorida" srcset="">
         </div>
@@ -29,12 +31,13 @@
     </header>
 
     <main>
-        <hr>
+        <hr> <!-- TAG SOBRANDO? -->
         <!--FORMULÁRIO DE LOGIN-->
         <div id="login">
             <!-- antes: method="post" -->
             <form method="post" action="cadastro.html">
                 <h1>Login</h1>
+                <!-- NÃO HÁ NECESSIDADE DESSA TAG ENGLOBANDO OS INPUTS. SE PRECISO FOR, AJUSTEM ISSO COM CSS. -->
                 <p>
                     <label for="nome_login">Seu e-mail ou número telefone celular</label>
                     <input id="nome_login" name="nome_login" required="required" type="text"
