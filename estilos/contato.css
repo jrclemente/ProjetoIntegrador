@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+.contato-principal {
+    /*
+    Define a posição de início da página principal.
+    Esta propriedade se faz necessário devido ao fato do cabeçalho ser fixo.
+    */
+    margin-top: 125px;
+}
+
 .contato-principal h2 {
     text-align: center;
 }
@@ -20,11 +28,33 @@
     border: 1px solid rgba(9, 218, 30, 0.847);
 }
 
+.contato-form{
+    display: inline-block;
+    width: 300px;
+}
+
 .contato-email label {
+    display:block;
     color: rgb(29, 162, 193);
     /* O elemento abaixo será incluido para ser específico para o label */
     /* font-family: Arial,sans-serif; */
 
+}
+
+.contato-email input{
+    margin: 0 0 20px;
+    /*
+    O primeiro valor é altura do box o segundo início do input, quando utilizado a posição
+    do início do input
+    */
+    padding: 10px;
+    width: 100%;
+}
+
+.contato-email textarea{
+    padding: 0px 10px;
+    /* Para retirar a opção de expandir  */
+    resize: none;
 }
 
 .contato-botao {

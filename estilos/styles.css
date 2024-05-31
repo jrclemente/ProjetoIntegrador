@@ -7,7 +7,10 @@
     box-sizing: border-box;
 }
 
-/* Define um controle de variável(var) a ser utilizado em vários elementos */
+/*
+Define um controle de variável(var) a ser utilizado em vários elementos
+Este recurso permite que a manutenção das cores fique em um único lugar
+*/
 :root {
     --cor-primaria: #80808061;
     --cor-segundaria: rgba(9, 218, 30, 0.847);
@@ -17,24 +20,37 @@ body {
     font-family: Arial, sans-serif;
     /* Define o tamanho da página - Altura(height)/Largura(width) - cria barra de rolagem */
     height: 2000px;
-   
+
 }
 
 header {
     border: 1px solid rgba(9, 218, 30, 0.847);
     text-align: center;
-    /* Este elemento permite que o menu possa conter o logo */
-    min-height: 180px;
-    /* position: fixed; */
+    /* Esta propriedade permite que o menu possa conter o logo */
+    /* min-height: 100px; */
+    /* Para que o cabeçalho fique fixo no topa a página se faz necessário as propriedades abaixo */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-header h1{
+header h1 {
     margin-top: 40px;
 }
 
-header .logo{
+header .logo {
     /* Para que o logo fique no lado esquerdo do menu */
     position: absolute;
+}
+
+.logo img {
+    border-radius: 10px;
+    width: 120px;
+    height: 110px;
+    /* redimensiona a imagem proporcionalmente para cobrir o contêiner, mantendo a proporção. */
+    object-fit: cover;
+    border: 1px solid yellow
 }
 
 menu {
@@ -79,6 +95,20 @@ li {
     margin: 10px;
 }
 
+.principal,
+.principal-produtos,
+.principal-sobre,
+.principal-login,
+.principal-cadastro,
+.principal-carrinho,
+.principal-privacidade {
+    /*
+    Define a posição de início da página principal.
+    Esta propriedade se faz necessário devido ao fato do cabeçalho ser fixo.
+    */
+    margin-top: 125px;
+}
+
 footer {
     border: 1px solid rgba(9, 218, 30, 0.847);
     background-color: #010101;
@@ -108,10 +138,11 @@ footer {
 }
 
 /* Controle WhatsApp */
-.whatsapp:hover{
+.whatsapp:hover {
     background-color: transparent;
-    border:transparent
+    border: transparent
 }
-.idimgwtsapp:hover{
+
+.idimgwtsapp:hover {
     transform: scale(0.9);
 }
