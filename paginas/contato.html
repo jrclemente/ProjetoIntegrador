@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- SE ATENTEM AO FATO DE QUE AQUI ABAIXO DEVE SER SEMPRE pt-BR, PESSOAL. pt-br ESTÁ INCORRETO... -->
 <html lang="pt-br">
 
 <head>
@@ -12,6 +13,7 @@
 
 <body>
     <header>
+        <!-- VERIFICAR OS APONTAMENTOS FEITOS NA PÁGINA INDEX.HTML PRA QUESTÃO ABAIXO. -->
         <div class="logo">
             <img src="\imagens\Manaca3.jpg" alt="Logo marca óleo esseciais manacá colorida" srcset="">
         </div>
@@ -31,15 +33,18 @@
 
     <main class="contato-principal">
         <!-- Conteúdo da página será carregado aqui -->
+        <!-- SUGIRO QUE TROQUEM DE SECTION PARA DIV AQUI ABAIXO.
+        POR PADRÃO, UTILIZEM SECTION APENAS QUANDO ESSA TAG FOR ENGLOBAR TODO O CONTEÚDO DA SEÇÃO. -->
         <section>
             <h2>Entre em Contato Conosco</h2>
             <p>Se tiver alguma dúvida ou precisar de mais informações, não hesite em nos contatar.</p>
             <p>Telefone: (99) 9999-9999</p>
-            <br>
+            <br> <!-- NÃO HÁ NECESSIDADE DE USAR <br> AQUI. -->
         </section>
 
         <div class="contato-email">
             <form class="contato-form" action="EnvioContato" method="POST" enctype="text/plain">
+                <!-- NÃO HÁ NECESSIDADE DESSA TAG ENGLOBANDO OS INPUTS. SE PRECISO FOR, AJUSTEM ISSO COM CSS. -->
                 <p>
                     <label for="contatoNome">Nome</label>
                     <input type="text" required name="contatoNome" id="contatoNome"
@@ -55,6 +60,7 @@
                         maxlength="150" style="resize: none"></textarea>
                 </p>
                 <div class="contato-botao">
+                    <!-- PREFIRAM O USO DE CLASSES EM VEZ DE IDS. -->
                     <div id="idEnviar">
                         <input type="submit" value="Enviar">
                         <!-- <button type='submit'>Enviar</button> -->
