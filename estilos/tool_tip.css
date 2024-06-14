@@ -1,0 +1,68 @@
+/* Define um valor da fonte padrão tendo com referência 16px */
+html {
+    font-size: 62.5%;
+}
+
+.tooltip {
+    position: relative;
+    font-family: Arial, sans-serif;
+
+    /* Gera um sublinhado abaixo da imagem */
+    /* border-bottom: 1px dashed #000; */
+}
+
+.tooltip:before {
+    content: attr(data-tooltip);
+
+    position: absolute;
+
+    bottom: 50%;
+    margin-bottom: 15px;
+    padding: 10px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 10px;
+
+    /* Largura/Altura */
+    width: 200px;
+    /* width: min-content; */
+    /* height: min-content; */
+
+    /* background: #000; */
+    /* color: #fff; */
+    background: #fff;
+    color: black;
+
+    text-align: center;
+
+    display: none;
+}
+
+.tooltip:after {
+    content: "";
+    position: absolute;
+
+    bottom: 50%;
+    margin-bottom: 5.3px;
+
+    left: calc(50% - 10px);
+    transform: translateX(-50%);
+    rotate: 270deg;
+
+    border: 10px solid;
+    /* border-color: transparent black transparent transparent; */
+    /* Define a direção da seta do box com a sua respectiva cor */
+    border-color: transparent rgba(9, 218, 30, 0.847) transparent transparent;
+
+    display: none;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}

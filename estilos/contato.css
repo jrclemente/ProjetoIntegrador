@@ -1,47 +1,41 @@
-/* CSS reset(reiniciar) */
-*,
-*:before,
-*:after {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 .contato-principal {
-    /*
-    Define a posição de início da página principal.
-    Esta propriedade se faz necessário devido ao fato do cabeçalho ser fixo.
-    */
-    margin-top: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Para que os itens fiquem abaixo do cabeçalho, quando este é definido como fixo */
+    padding-top: 160px;
 }
 
 .contato-principal h2 {
     text-align: center;
 }
 
-.contato-email {
-    display: flex;
-    width: 30%;
-    /* isso se faz necessário, uma vez o display passa a ser flexível e não mais em bloco */
-    padding: 30px;
-    /* position: absolute;  */
-    border: 1px solid rgba(9, 218, 30, 0.847);
+.entre-contato {
+    margin-bottom: 10px;
 }
 
-.contato-form{
-    display: inline-block;
-    width: 300px;
+.entre-contato p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 10px;
+    padding: 10px 10px;
+    width: 450px;
 }
 
 .contato-email label {
-    display:block;
-    color: rgb(29, 162, 193);
-    /* O elemento abaixo será incluido para ser específico para o label */
-    /* font-family: Arial,sans-serif; */
-
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.contato-email input{
+.contato-email input {
     margin: 0 0 20px;
     /*
     O primeiro valor é altura do box o segundo início do input, quando utilizado a posição
@@ -49,16 +43,31 @@
     */
     padding: 10px;
     width: 100%;
+    /* Para colocar uma borda nos campos input e tirar a sombra que a borada coloca */
+    border: none;
+    border:solid 1px #ccc;
+    border-radius: 5px ;
 }
 
-.contato-email textarea{
+.contato-email textarea {
     padding: 0px 10px;
     /* Para retirar a opção de expandir  */
     resize: none;
+    width: 427px;
+    /* Para colocar uma borda nos campos input e tirar a sombra que a borada coloca */
+    border: none;
+    border:solid 1px #ccc;
+    border-radius: 5px ;
 }
 
 .contato-botao {
+    margin: 5px;
     position: relative;
+}
+
+.contato-whatsapp {
+    margin-top: 10px;
+    text-align: center;
 }
 
 /*
@@ -76,11 +85,11 @@ input[type="reset"] {
     border: 1px solid #fff;
     margin-bottom: 10px;
     text-shadow: 0 1px 1px #333;
+    align-items: center;
 
     -webkit-border-radius: 5px;
     border-radius: 5px;
 
-    /* transition: all 0.5s linear; */
     transition: all 0.3s ease;
 
     /* Faz com que os botões fiquem um ao lado do outro */

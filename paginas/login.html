@@ -1,82 +1,70 @@
 <!DOCTYPE html>
-<!-- SE ATENTEM AO FATO DE QUE AQUI ABAIXO DEVE SER SEMPRE pt-BR, PESSOAL. pt-br ESTÁ INCORRETO... -->
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <base href="/">
     <link rel="icon" type="image/png" href="/publico/favicon/login.png">
-    <link rel="stylesheet" type="text/css" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
+    <link rel="stylesheet" href="/estilos/login.css">
 </head>
 
 <body>
-    <header>
-        <!-- VERIFICAR OS APONTAMENTOS FEITOS NA PÁGINA INDEX.HTML PRA QUESTÃO ABAIXO. -->
-        <div class="logo">
-            <img src="\imagens\Manaca3.jpg" alt="Logo marca óleo esseciais manacá colorida" srcset="">
-        </div>
-        <h1>Óleos Essenciais Manacá</h1>
-        <nav class="menu">
-            <ul>
-                <li><a href="..\index.html">Página Inicial</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="login.html">Minha Conta</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
-                <li><a href="privacidade.html">Política de Privacidade</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+    <div id="header"></div>
 
     <main class="principal-login">
         <!--FORMULÁRIO DE LOGIN-->
-        <div id="login">
+        <div class="login">
             <!-- antes: method="post" -->
-            <form method="post" action="cadastro.html">
-                <h1>Login</h1>
-                <!-- NÃO HÁ NECESSIDADE DESSA TAG ENGLOBANDO OS INPUTS. SE PRECISO FOR, AJUSTEM ISSO COM CSS. -->
-                <p>
-                    <label for="nome_login">Seu e-mail ou número telefone celular</label>
-                    <input id="nome_login" name="nome_login" required="required" type="text"
+            <form class="login-form" method="POST" action="cadastro.html">
+                <div>
+                    <h1>Fazer Login</h1>
+                </div>
+                <div class="nome-login">
+                    <label for="nome_login">E-mail ou número de telefone celular</label>
+                    <input id="nome_login" name="nome_login" autocomplete="nome_login" required="required" type="text"
                         placeholder="contato@htmlecss.com.br" />
-                </p>
+                </div>
 
-                <p>
-                    <label for="senha_login">Sua senha</label>
-                    <input id="senha_login" name="senha_login" required="required" type="password"
+                <div class="senha-login">
+                    <label for="senha_login">Senha</label>
+                    <input id="senha_login" name="senha_login" autocomplete="senha_login" required="required" type="password"
                         placeholder="senha" />
-                </p>
+                </div>
 
-                <p>
-                    <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
-                    <label for="manterlogado">Manter-me logado</label>
-                </p>
+                <div class="manter-logado">
+                    <input type="checkbox" name="manterlogado" id="manterlogado" value="false" />
+                    <!--  &nbsp; para gerar um espaço -->
+                    <label for="manterlogado">&nbsp;Manter-me logado</label>
+                </div>
 
-                <p>
+                <div>
                     <input type="submit" value="Logar" />
-                </p>
+                </div>
 
-                <p class="link">
+                <p class="link-cadastro">
                     Ainda não tem conta?
-                    <a href="cadastro.html">Cadastre-se</a>
+                    <a href="paginas/cadastro.html" onclick="navigate('/paginas/cadastro')">&nbsp;Cadastre-se</a>
                 </p>
             </form>
         </div>
     </main>
 
-    <footer>
-        <div>
-            <ul>
-                <li><a href="#">Condições de Uso</a></li>
-                <li><a href="#">Notificação de Privacidade</a></li>
-                <li><a href="#">Cookies</a></li>
-                <li><a href="#">Anúncios Baseados em Interesses</a></li>
-            </ul>
-        </div>
-        <p id="anoHoje">&copy; 2024 Todos os direitos reservados</p>
-    </footer>
+    <div id="footer"></div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/util.js"></script>
+
+    <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
+    <script src="../scripts/jquery/jquery-3.7.1.min.js"></script>
+
+    <!-- Script externo com funções para controlar cabeçalho/rodapé -->
+    <script src="../scripts\controladores.js"></script>
 </body>
 
 </html>

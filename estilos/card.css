@@ -1,11 +1,15 @@
 /* Estilos comuns para os cards */
 .secao4 {
     margin: 0;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;    
 }
 
 .secao4-div {
     display: flex;
+    /* flex-wr: Define se os itens flexíveis são forçados a ficarem na mesma linha 
+    ou se podem ser quebradas em varias linhas.
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-wrap
+    */
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
@@ -15,7 +19,7 @@
 .secao4-div-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     width: calc(100% / 3 - 60px);
     margin: 10px;
     padding: 20px;
@@ -25,6 +29,18 @@
     transition: all 0.3s ease;
     cursor: pointer;
     border: 1px solid rgba(9, 218, 30, 0.847);
+}
+
+.imagemProduto {
+    align-self: center;
+}
+
+.secao4-div-card article {
+    text-align: left;
+}
+
+.secao4-div-card p {
+    text-align: left;
 }
 
 .secao4-div-card:hover {

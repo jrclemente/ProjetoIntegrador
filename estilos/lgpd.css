@@ -1,0 +1,77 @@
+main{    
+    font-family: 'Roboto', Arial, sans-serif; 
+    margin: 0;
+    padding: 0;    
+}
+
+.cookies-mgs{
+    width: 50%;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    background-image: linear-gradient(to right, #98c5e3, #1772d9);
+    /* position: relative; */
+    position: fixed;
+    bottom: 15%;
+    left: 60%;
+    transform: translate(-50%);
+    border-radius: 15px;
+    /* border: 1px solid blue; */
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    /* O controle abaixo define que a mensagem cookie fique escondida */
+    display: none;    
+}
+/* Controle abaixo define a exibição da mensagem cookie, quando existir a classe exibir
+que foi criada dinamicamente no arquivo JS: lgpd.js */
+.cookies-mgs.exibir{
+    display: block; 
+}
+.cookies-mgs .cookies-txt{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.cookies-mgs .cookies-btn{
+    margin-left: 20px ;
+}
+.cookies-mgs .cookies-btn button{    
+    color: aliceblue;
+    font-weight: 500;
+    font-size: 10px;
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border-style: solid;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    /* Define a cor da borda inferior */
+    border-bottom-color: rgba(27, 177, 55, 0.922);
+    font-size: 1.2rem;
+}
+
+/* .cookies-btn{   
+} */
+
+.cookies-btn #btn-Aceitar{
+    background-color: #2D888F;
+    margin-bottom: 5px;
+    font-weight:bold;
+}
+
+.cookies-btn #btn-Personalizar{  
+    background-color: #2D888F;  
+    margin-bottom: 5px;
+    font-weight:bold;
+}
+
+.cookies-btn #btn-desabilitar{ 
+    background-color: #2D888F;   
+    margin-bottom: 5px;
+    font-weight:bold;
+}
+
+.cookies-mgs .cookies-btn button:hover{
+    transform: scale(0.9);
+}

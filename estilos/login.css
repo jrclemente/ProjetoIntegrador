@@ -1,0 +1,94 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 10px;
+    width: 450px;
+}
+
+#nome_login {
+    width: 300px
+}
+
+#senha_login {
+    width: 250px
+}
+
+.login-form input {
+    margin: 0 0 20px;
+    /*
+    O primeiro valor é altura do box o segundo início do input, quando utilizado a posição
+    do início do input
+    */
+    padding: 10px;
+    /* Para colocar uma borda nos campos input e tirar a sombra que a borada coloca */
+    border: none;
+    border:solid 1px #ccc;
+    border-radius: 5px ;
+}
+
+.login-form h1 {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+}
+
+.senha-login {
+    margin-left: -50px;
+}
+
+.manter-logado {
+    display: flex;
+    margin-left: -150px;
+}
+
+.manter-logado input {
+    /* Redefine o tamanho do checkbox - Display Flex interfere neste tipo de elemento */
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 5px;
+}
+
+.link-cadastro {
+    /* top / right / bottom / left */
+    margin: 10px 0 10px 0;
+}
+
+/*
+Estilo do botão submit
+Aplicação de estilo através do atributo de um elemento(tag)
+*/
+input[type="submit"] {
+    cursor: pointer;
+    background: rgb(61, 157, 179);
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px #333;
+
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    /* transition: all 0.5s linear; */
+    transition: all 0.3s ease;
+
+    /* Faz com que os botões fiquem um ao lado do outro */
+    float: left;
+    margin-left: 10%;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+}
+
+input[type="submit"]:hover {
+    background: #4ab3c6;
+}

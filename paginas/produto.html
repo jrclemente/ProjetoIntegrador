@@ -1,51 +1,44 @@
 <!DOCTYPE html>
-<!-- SE ATENTEM AO FATO DE QUE AQUI ABAIXO DEVE SER SEMPRE pt-BR, PESSOAL. pt-br ESTÁ INCORRETO... -->
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produto</title>
+    <base href="/">
     <link rel="icon" type="image/png" href="\publico\favicon\oleo-essencial.png">
-    <link rel="stylesheet" type="text/css" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
+    <!-- <link rel="stylesheet" href="/estilos/apresentacao.css"> -->
+    <link rel="stylesheet" href="/estilos/compra.css">
 </head>
 
 <body>
-    <header>
-        <!-- VERIFICAR OS APONTAMENTOS FEITOS NA PÁGINA INDEX.HTML PRA QUESTÃO ABAIXO. -->
-        <div class="logo">
-            <img src="\imagens\Manaca3.jpg" alt="Logo marca óleo esseciais manacá colorida" srcset="">
-        </div>
-        <h1>Óleos Essenciais Manacá</h1>
-        <nav class="menu">
-            <ul>
-                <li><a href="..\index.html">Página Inicial</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="login.html">Minha Conta</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
-                <li><a href="privacidade.html">Política de Privacidade</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+    <div id="header"></div>
 
-    <main class="principal-produto">
-        <!-- Conteúdo da página será carregado aqui -->
-        <h1>Página em construção....</h1>
+    <main class="principal">
+        <div class="apresentacaoProduto">
+            <section class="secao4">
+                <!-- Conteúdo da página será carregado aqui -->
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <div>
-            <ul>
-                <li><a href="#">Condições de Uso</a></li>
-                <li><a href="#">Notificação de Privacidade</a></li>
-                <li><a href="#">Cookies</a></li>
-                <li><a href="#">Anúncios Baseados em Interesses</a></li>
-            </ul>
-        </div>
-        <p id="anoHoje">&copy; 2024 Todos os direitos reservados</p>
-    </footer>
+    <!-- Está sendo utilizado o rodapé definido no include e referenciado através id='footer' -->
+    <div id="footer"></div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/util.js"></script>
+    
+    <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
+    <script src="./scripts/jquery/jquery-3.7.1.min.js"></script>
+
+    <!-- Script externo com funções para controlar cabeçalho/rodapé -->
+    <script src="scripts/controladores.js"></script>
+
+    <script type="module" src="/db/obtemdadosproduto.js" defer></script>
 </body>
 
 </html>

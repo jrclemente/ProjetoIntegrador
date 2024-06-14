@@ -1,0 +1,100 @@
+header {
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    /* Para que as imagens possam ficar "escondidas" atras do menu */
+    /* background-color: rgba(187, 242, 180, 0.5); */
+    background-image: linear-gradient(to right, #98c5e3, #1772d9);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 10 Top; 20 Right; 10 Botton e 20 Left) - Sempre no sentido horário*/
+    padding: 10px 20px 10px 20px;
+    /*
+    Quando definir o cabeçalho como fixo, deve-se definir posição 0 em relação
+    à margen direita(right)/esqueda(left) do navegador
+    https://www.ranoya.com/books/public/css/css-right.php#:~:text=Atrav%C3%A9s%20do%20atributo%20right%20%C3%A9,rela%C3%A7%C3%A3o%20a%20sua%20borda%20direita.
+    https://www.ranoya.com/books/public/css/css-left.php#:~:text=Atrav%C3%A9s%20do%20atributo%20left%20%C3%A9,rela%C3%A7%C3%A3o%20a%20sua%20borda%20esquerda.
+    */
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+.titulo-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.menu ul {
+    display: flex;
+    /* Define 50px entre cada um dos itens do menu. Evita a utilização do margin: right/left */
+    gap: 50px;
+    padding: 10px;
+    font-size: 1.5rem;
+    /* Retira a bolinha na frente do item de menu */
+    list-style-type: none;
+}
+
+.login-carrinho {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.btnLogin {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem 1rem;
+
+    border: 2px solid rgba(9, 218, 30, 0.847);
+    background: rgb(233, 231, 231);
+    /* border-radius: 5px; */
+    border-radius: 10px;
+    color: blue
+}
+
+.carrinho {
+    margin: 10px;
+    /* Para definir uma borda em volta de uma imagem/figura */
+    padding: 5px 5px 5px 5px;
+    border: 2px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    background: rgb(233, 231, 231);
+}
+
+.btnLogin:hover {
+    color: white;
+    background-color: #1c87c9;
+    border: 2px solid rgba(9, 218, 30, 0.847);
+    /* border-radius: faz com que as bordas fiquem arredondadas conforme o valor definido */
+    border-radius: 10px;
+}
+
+.carrinho a :hover {
+    background-color: transparent;
+}
+
+.imgLogo {
+    max-width: 100px;
+    max-height: 99px;
+    width: auto;
+    height: auto;
+}
+
+.link-logo:hover {
+    background-color: transparent;
+    border: transparent
+}
+
+.imgCarrinho {
+    max-width: 24px;
+    max-height: 24px;
+    width: auto;
+    height: auto;
+}

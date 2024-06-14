@@ -1,51 +1,56 @@
 <!DOCTYPE html>
-<!-- SE ATENTEM AO FATO DE QUE AQUI ABAIXO DEVE SER SEMPRE pt-BR, PESSOAL. pt-br ESTÁ INCORRETO... -->
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacidade</title>
-    <link rel="icon" type="image/png" href="\publico\favicon\icons8-cadeado-48.png">
-    <link rel="stylesheet" type="text/css" href="/estilos/styles.css">
+    <title>Política de Privacidade e Termos de Uso</title>
+    <base href="/">
+    <link rel="icon" type="image/png" href="\publico\favicon\seguranca.png">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
 </head>
 
 <body>
-    <header>
-        <!-- VERIFICAR OS APONTAMENTOS FEITOS NA PÁGINA INDEX.HTML PRA QUESTÃO ABAIXO. -->
-        <div class="logo">
-            <img src="\imagens\Manaca3.jpg" alt="Logo marca óleo esseciais manacá colorida" srcset="">
-        </div>
-        <h1>Óleos Essenciais Manacá</h1>
-        <nav class="menu">
-            <ul>
-                <li><a href="..\index.html">Página Inicial</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="sobre.html">Sobre Nós</a></li>
-                <li><a href="login.html">Minha Conta</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
-                <li><a href="privacidade.html">Política de Privacidade</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+    <div id="header"></div>
 
-    <main class="principal-privacidade">
-        <!-- Conteúdo da página será carregado aqui -->
-        <h1>Página em construção....</h1>
+    <main class="principal-politica">
+        <div class="Privacidade-TermoUso">
+            <!-- Ancorando pontos específicos de uma página: #idPolitica / #idTermos -->
+            <div class="politica-privacidade">
+                <h2 id="idPolitica"> <a href="#politica">Política de Privacidade e Proteção de Dados Pessoais</a>
+                </h2>
+                <p>Nossa política de privacidade descreve como coletamos, usamos e protegemos as informações
+                    pessoais
+                    dos
+                    nossos usuários. Ao utilizar nosso site, você concorda com as práticas descritas nesta política.
+                </p>
+                <p>Para mais detalhes, consulte nossa <a href="#">Política de Privacidade completa</a>.</p>
+            </div>
+            <div class="termos-uso">
+                <h2 id="idTermos"> <a href="#termos">Termos de Uso</a></h2>
+                <p>Ao acessar ou usar nosso site, você concorda em cumprir estes Termos de Uso. Esteja ciente de que
+                    podemos
+                    atualizar ou modificar estes termos periodicamente, e é sua responsabilidade revisá-los
+                    regularmente.
+                </p>
+                <p>Para mais detalhes, consulte nossos <a href="#">Termos de Uso completos</a>.</p>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <div>
-            <ul>
-                <li><a href="#">Condições de Uso</a></li>
-                <li><a href="#">Notificação de Privacidade</a></li>
-                <li><a href="#">Cookies</a></li>
-                <li><a href="#">Anúncios Baseados em Interesses</a></li>
-            </ul>
-        </div>
-        <p id="anoHoje">&copy; 2024 Todos os direitos reservados</p>
-    </footer>
+    <div id="footer"></div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/util.js" defer></script>
+
+    <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
+    <script src="../scripts/jquery/jquery-3.7.1.min.js"></script>
+
+    <!-- Script externo com funções para controlar cabeçalho/rodapé -->
+    <script src="../scripts/controladores.js" defer></script>
 </body>
 
 </html>

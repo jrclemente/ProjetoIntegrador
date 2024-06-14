@@ -1,0 +1,128 @@
+/* Estilos comuns para os cards */
+.secao4 {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    /* Para que os itens fiquem abaixo do cabeçalho, quando este é definido como fixo */
+    /* padding-top: 100px; */
+}
+
+.secao4-div {
+    display: flex;
+    /* flex-wr: Define se os itens flexíveis são forçados a ficarem na mesma linha 
+    ou se podem ser quebradas em varias linhas.
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-wrap
+    */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.secao4-div-card {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: calc(100% / 2);
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: white;
+    /* transition: all 0.5s ease; */
+    /* cursor: pointer; */
+    border: 1px solid rgba(9, 218, 30, 0.847);
+}
+
+.imagemProduto {
+    align-self: center;
+}
+
+.secao4-div-card article {
+    text-align: left;
+}
+
+.secao4-div-card p {
+    text-align: left;
+}
+
+.secao4-div-card:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.secao4-div-card img {
+    width: 35%;
+    height: auto;
+}
+
+.secao4-div-card h3 {
+    margin-bottom: 0px;
+}
+
+.qtdeCarrinho {
+    display: flex; 
+    justify-content: center;   
+}
+
+.btn-QtdeProduto {
+    justify-content: space-between;
+    background-color: lightseagreen;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+}
+
+#btnSubtrair{
+    padding: 5px;  
+    margin-right: 10px;
+    cursor: pointer;
+}
+#qtdeProduto{
+    padding: 5px;
+}
+#btnAdicionar{
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+input {
+    width: 40px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.subTotal-Section{
+    display: flex;
+    /* flex-direction: column; */
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.subtotal-Label{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.subtotal-Dados{
+    display: flex;
+    flex-direction: column;
+}
+.subtotal-Dados p{
+    padding-left: 5px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .secao4-div-card {
+        width: 100%;
+    }
+}
