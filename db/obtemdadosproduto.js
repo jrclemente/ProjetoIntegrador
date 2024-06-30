@@ -1,3 +1,4 @@
+"use strict";
 import obtemProdutos from './dados.js';
 // import {numeroParaReal} from '/scripts/util.js';
 
@@ -54,10 +55,10 @@ let quantidadeSubtotal = document.getElementById("qtdeSubtotal");
 let valorSubtotal = document.getElementById("valorSubtotal");
 let total = document.getElementById('totalSubtotal');
 //
-AtualizaSubTotal();
+// AtualizaSubTotal();
 //
-btnAdicionar.addEventListener('click', Adicionar);
-btnSubtrair.addEventListener('click', Subtrair);
+// btnAdicionar.addEventListener('click', Adicionar);
+// btnSubtrair.addEventListener('click', Subtrair);
 //#endregion
 
 //#region Funções Atualizações Subtotal
@@ -147,18 +148,19 @@ function MontaDadosProduto(objProduto) {
     const itemComprar = document.createElement('a');
     itemComprar.className = 'btn-verProduto';
     itemComprar.text = 'COMPRAR';
-    itemComprar.href = './finalizarCompra.html';
+    // itemComprar.href = '/paginas/carrinho.html';
+    itemComprar.href = `/paginas/carrinho.html?id=${objProduto.id}`
 
     //Cria elemento para Qtde Produto x Total - Compra
-    const sectionCarrinho = document.createElement('section')
-    sectionCarrinho.className = 'qtdeCarrinho'
-    const btnProdutoQtde = document.createElement('div');
-    btnProdutoQtde.className = 'btn-QtdeProduto'
-    sectionCarrinho.appendChild(btnProdutoQtde)
+    // const sectionCarrinho = document.createElement('section')
+    // sectionCarrinho.className = 'qtdeCarrinho'
+    // const btnProdutoQtde = document.createElement('div');
+    // btnProdutoQtde.className = 'btn-QtdeProduto'
+    // sectionCarrinho.appendChild(btnProdutoQtde)
     //
-    GeraBotao('-', 'btnSubtrair', btnProdutoQtde);
-    GeraInput(btnProdutoQtde);
-    GeraBotao('+', 'btnAdicionar', btnProdutoQtde);
+    // GeraBotao('-', 'btnSubtrair', btnProdutoQtde);
+    // GeraInput(btnProdutoQtde);
+    // GeraBotao('+', 'btnAdicionar', btnProdutoQtde);
     //
     //#region Monta Dados do Produto(Item)
     //Imagem:
@@ -195,8 +197,8 @@ function MontaDadosProduto(objProduto) {
     //#endregion
 
     //Adicionar Quantidades/Subtotais:
-    secaoDivCard.append(sectionCarrinho);
-    GeraSubTotal(secaoDivCard);
+    // secaoDivCard.append(sectionCarrinho);
+    // GeraSubTotal(secaoDivCard);
 
     //Botão Comprar:
     secaoDivCard.append(itemComprar);

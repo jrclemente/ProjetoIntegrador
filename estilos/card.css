@@ -49,6 +49,7 @@
 }
 
 .secao4-div-card img {
+    border-radius: 10px;
     width: 35%;
     height: auto;
 }

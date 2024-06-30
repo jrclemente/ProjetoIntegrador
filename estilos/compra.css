@@ -28,9 +28,9 @@
     box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     background-color: white;
-    /* transition: all 0.5s ease; */
-    /* cursor: pointer; */
     border: 1px solid rgba(9, 218, 30, 0.847);
+    transition: all 0.3s ease;
+    cursor: pointer;    
 }
 
 .imagemProduto {
@@ -51,6 +51,7 @@
 }
 
 .secao4-div-card img {
+    border-radius: 10px;
     width: 35%;
     height: auto;
 }
@@ -60,8 +61,9 @@
 }
 
 .qtdeCarrinho {
-    display: flex; 
-    justify-content: center;   
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px;
 }
 
 .btn-QtdeProduto {
@@ -71,15 +73,17 @@
     border-radius: 8px;
 }
 
-#btnSubtrair{
-    padding: 5px;  
+#btnSubtrair, #btnSubtrairLS {
+    padding: 5px;
     margin-right: 10px;
     cursor: pointer;
 }
-#qtdeProduto{
+
+#qtdeProduto {
     padding: 5px;
 }
-#btnAdicionar{
+
+#btnAdicionar, #btnAdicionarLS {
     padding: 5px;
     margin-left: 10px;
     cursor: pointer;
@@ -96,27 +100,31 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.subTotal-Section{
+.subTotal-Section {
     display: flex;
     /* flex-direction: column; */
     border: 1px solid rgba(9, 218, 30, 0.847);
     border-radius: 5px;
+    margin: auto;
     margin-top: 15px;
     margin-bottom: 15px;
     font-weight: bold;
+    padding: 5px 5px;
+    width: max-content;
 }
 
-.subtotal-Label{
+.subtotal-Label {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-.subtotal-Dados{
+.subtotal-Dados {
     display: flex;
     flex-direction: column;
 }
-.subtotal-Dados p{
+
+.subtotal-Dados p {
     padding-left: 5px;
 }
 

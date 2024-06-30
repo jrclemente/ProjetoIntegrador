@@ -1,0 +1,140 @@
+.principal-carrinho {
+    padding-top: 190px;
+    margin-bottom: 100px;
+}
+
+.carrinho-compra {
+    display: flex;
+    /* flex-wr: Define se os itens flexíveis são forçados a ficarem na mesma linha 
+    ou se podem ser quebradas em varias linhas.
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-wrap
+    */
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    width: calc(80% / 2);
+    /* width: calc(100% / 3 - 60px); */
+    padding: 10px;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    /* Para centralizar */
+    margin: auto;
+}
+
+/* .carrinho-compra:hover {
+    transform: scale(1.1);
+    z-index: 1;
+} */
+
+.secao-compra:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.fecharCompras {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: min-content;
+    margin-left: auto;
+    padding: 5px 5px;
+}
+
+.carrinho-compra .titulo-compra {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.excluir {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: min-content;
+    margin-left: auto;
+    padding: 5px 5px;
+}
+
+.secao-compra {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.produto-compra,
+.produto-compra-LS {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    margin: 15px 15px;
+    padding: 5px 10px
+}
+
+.produto-compra #img {
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.produto-compra-LS #img {
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.valor-compra {
+    font-weight: bold;
+}
+
+.fecharCompras:hover {
+    border: 1px solid red;
+    border-radius: 5px;
+    width: max-content;
+}
+
+.excluir:hover {
+    border: 1px solid red;
+    border-radius: 5px;
+    width: max-content;
+}
+
+.continuar-finalizar-compra {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: space-around;
+    /* flex-direction: column; */
+    align-items: center;
+    font-size: 1.2rem;
+
+}
+
+.continuar-comprado {
+    color: #1c87c9;
+    padding: 5px;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    /* margin-bottom: 5px; */
+    width: 100px
+}
+
+.finalizar-compra {
+    color: #1c87c9;
+    padding: 5px;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    width: 100px
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .carrinho-compra {
+        width: 100%;
+    }
+}

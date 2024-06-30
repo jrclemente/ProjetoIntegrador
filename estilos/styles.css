@@ -46,7 +46,9 @@ body {
 .principal-politica,
 .principal-login,
 .principal-cadastro,
-.principal-carrinho {
+.principal-carrinho,
+.termoUso,
+.politicaPrivacidade {
     /* Para que os itens fiquem abaixo do cabeçalho, quando este é definido como fixo(position: fixed) */
     padding-top: 170px;
 }
@@ -54,7 +56,8 @@ body {
 .principal {
     margin-bottom: 100px;
 }
-.principal h1{
+
+.principal h1 {
     margin-bottom: 10px;
 }
 
@@ -62,7 +65,7 @@ body {
     text-align: center;
 }
 
-.politica-privacidade{
+.politica-privacidade {
     margin-bottom: 10px;
 }
 
@@ -107,14 +110,16 @@ footer {
 
 .btn-verProduto,
 .btn-comprar {
-    /* border: none;Retira a borda */
+    margin-top: 5px;
     border: 1px solid rgba(9, 218, 30, 0.847);
     padding: 10px;
+    margin: auto;
     background-color: var(--cor-primaria);
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 5px;
+    width: max-content;
 }
 
 .btn-verProduto:hover,
