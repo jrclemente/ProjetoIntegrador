@@ -26,19 +26,9 @@ html {
 
 body {
     font-family: 'Roboto', Arial, sans-serif;
-    /* font-size: 1.6em; */
     /* Cores em degradê */
     background-image: linear-gradient(to right, #98c5e3, #1772d9);
 }
-
-/* Este seletor - minhaPagina - é apenas para teste interno */
-/* .minhaPagina {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-} */
 
 .principal,
 .principal-produtos,
@@ -72,54 +62,51 @@ body {
 /* Estilizando todos os links de âncora */
 a {
     text-decoration: none;
-    /* color: #1c87c9; */
     color: #fff;
-    /* background-color: white; */
 }
 
 a:hover {
     color: white;
     background-color: #1c87c9;
     border: 1px solid rgba(9, 218, 30, 0.847);
-    /* border-radius: faz com que a borda fique arredondado */
     border-radius: 5px;
 }
 
 footer {
-    border: 1px solid rgba(9, 218, 30, 0.847);
-    background-color: #010101;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
     position: fixed;
-    right: 0;
     bottom: 0;
+    right: 0;
     left: 0;
     font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+    background-color: #010101;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    padding: 1rem;
 }
 
 .rodaPe ul {
-    list-style-type: none;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 0 0 18px;
     gap: 30px;
+    padding: 0;
+    margin-left: 18px;
+    list-style-type: none;
 }
 
 .btn-verProduto,
 .btn-comprar {
-    margin-top: 5px;
-    border: 1px solid rgba(9, 218, 30, 0.847);
-    padding: 10px;
-    margin: auto;
-    background-color: var(--cor-primaria);
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 5px;
     width: max-content;
+    text-decoration: none;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    background-color: var(--cor-primaria);
+    padding: 10px;
+    margin-top: 5px;
+    margin: auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-verProduto:hover,
@@ -137,7 +124,7 @@ footer {
 
 .whatsapp:hover {
     background-color: transparent;
-    border: transparent
+    border: transparent;
 }
 
 .idimgwtsapp:hover {
@@ -148,12 +135,10 @@ footer {
 
 .botao {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-
-    padding: 1rem 2.6rem;
-
+    justify-content: center;
+    color: blue;
     background: grey;
     border-radius: 5px;
-    color: blue
+    padding: 1rem 2.6rem;
 }

@@ -1,4 +1,3 @@
-
 .contato-principal {
     display: flex;
     flex-direction: column;
@@ -16,17 +15,17 @@
 }
 
 .entre-contato p {
-    font-weight: bold;
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .contato-form {
+    width: 450px;
     display: flex;
     flex-direction: column;
     border: 1px solid rgba(9, 218, 30, 0.847);
     border-radius: 10px;
-    padding: 10px 10px;
-    width: 450px;
+    padding: 10px;
 }
 
 .contato-email label {
@@ -36,38 +35,36 @@
 }
 
 .contato-email input {
+    width: 100%;
     margin: 0 0 20px;
+    /* Para colocar uma borda nos campos input e tirar a sombra que a borada coloca */
+    border: 1px solid #ccc;
+    border-radius: 5px;
     /*
     O primeiro valor é altura do box o segundo início do input, quando utilizado a posição
     do início do input
     */
     padding: 10px;
-    width: 100%;
-    /* Para colocar uma borda nos campos input e tirar a sombra que a borada coloca */
-    border: none;
-    border:solid 1px #ccc;
-    border-radius: 5px ;
 }
 
 .contato-email textarea {
+    width: 427px;
+    /* Para colocar uma borda nos campos input e tirar a sombra que a borada coloca */
+    border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 0px 10px;
     /* Para retirar a opção de expandir  */
     resize: none;
-    width: 427px;
-    /* Para colocar uma borda nos campos input e tirar a sombra que a borada coloca */
-    border: none;
-    border:solid 1px #ccc;
-    border-radius: 5px ;
 }
 
 .contato-botao {
-    margin: 5px;
     position: relative;
+    margin: 5px;
 }
 
 .contato-whatsapp {
-    margin-top: 10px;
     text-align: center;
+    margin-top: 10px;
 }
 
 /*
@@ -76,26 +73,21 @@ Aplicação de estilo através do atributo de um elemento(tag)
 */
 input[type="submit"],
 input[type="reset"] {
-    width: 30% !important;
-    cursor: pointer;
-    background: rgb(61, 157, 179);
-    padding: 8px 5px;
-    color: #fff;
-    font-size: 20px;
-    border: 1px solid #fff;
-    margin-bottom: 10px;
-    text-shadow: 0 1px 1px #333;
-    align-items: center;
-
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-
-    transition: all 0.3s ease;
-
     /* Faz com que os botões fiquem um ao lado do outro */
     float: left;
-    margin-left: 10%;
+    width: 30% !important;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+    align-items: center;
+    background: rgb(61, 157, 179);
     border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    padding: 8px 5px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 /* Aplicação de estilo através do atributo de um elemento(tag) */

@@ -1,7 +1,7 @@
 .cadastro {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     /*
     Verificar se tem uma forma de fazer com que página aumente de forma automática. 
     Pois todas as vezes que um campo tem o seu tamanho alterado, tem que alerar a altura da página.
@@ -19,32 +19,31 @@
 
 .logo-cadastro {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+    gap: 30px;
     font-size: 2rem;
     font-weight: bold;
-    gap: 30px;
 }
 
 .logo-endereco {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+    gap: 30px;
     font-size: 2rem;
     font-weight: bold;
-    gap: 30px;
 }
 
 .dados-pessoais {
+    width: 700px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     border: 1px solid rgba(9, 218, 30, 0.847);
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 15px 15px 15px 15px;
-    width: 700px;
+    padding: 15px;
 }
 
 .dados-pessoais label {
@@ -54,18 +53,17 @@
 .dados-pessoais input,
 select {
     /* Para colocar uma borda nos campos input e tirar a sombra que a borada coloca */
-    border: none;
-    border: solid 1px #ccc;
+    border: 1px solid #ccc;
     border-radius: 5px;
     margin: 0 0 10px;
     padding: 5px;
 }
 
 .oferta {
-    display: flex;    
+    display: flex;
 }
 
-.oferta input{
+.oferta input {
     /* Redefine o tamanho do checkbox - Display Flex interfere neste tipo de elemento */
     min-width: 20px;
     min-height: 20px;
@@ -75,24 +73,21 @@ select {
 .endereco input,
 select,
 textarea {
-    /* Para colocar uma borda nos campos input e tirar a sombra que a borada coloca */
-    border: none;
-    border: solid 1px #ccc;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 0 0 10px;
+    margin-bottom: 10px;
     padding: 5px;
 }
 
 .endereco {
+    width: 700px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     border: 1px solid rgba(9, 218, 30, 0.847);
     border-radius: 10px;
+    padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 15px 15px 15px 15px;
-    width: 700px;
 }
 
 .endereco label {
@@ -100,9 +95,9 @@ textarea {
 }
 
 .endereco textarea {
+    width: 650px;
     /* Para retirar a opção de expandir  */
     resize: none;
-    width: 650px;
 }
 
 /* Botão Enviar */
@@ -111,25 +106,20 @@ Estilo do botão submit
 Aplicação de estilo através do atributo de um elemento(tag)
 */
 input[type="submit"] {
-    cursor: pointer;
-    background: rgb(61, 157, 179);
-    padding: 8px 5px;
-    color: #fff;
-    font-size: 20px;
-    border: 1px solid #fff;
-    margin-bottom: 10px;
-    text-shadow: 0 1px 1px #333;
-    align-items: center;
-
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-
-    transition: all 0.3s ease;
-
     /* Faz com que os botões fiquem um ao lado do outro */
     float: left;
-    margin-left: 10%;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+    align-items: center;
+    background: rgb(61, 157, 179);
     border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    padding: 8px 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 /* Aplicação de estilo através do atributo de um elemento(tag) */

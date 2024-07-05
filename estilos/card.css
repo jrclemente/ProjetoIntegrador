@@ -1,7 +1,7 @@
 /* Estilos comuns para os cards */
 .secao4 {
     margin: 0;
-    font-family: 'Roboto', Arial, sans-serif;    
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 .secao4-div {
@@ -12,23 +12,22 @@
     */
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px;
     text-align: center;
+    padding: 10px;
 }
 
 .secao4-div-card {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     width: calc(100% / 3 - 60px);
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 15px;
     margin: 10px;
     padding: 20px;
-    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    background-color: white;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 1px solid rgba(9, 218, 30, 0.847);
 }
 
 .imagemProduto {
@@ -49,9 +48,9 @@
 }
 
 .secao4-div-card img {
-    border-radius: 10px;
     width: 35%;
     height: auto;
+    border-radius: 10px;
 }
 
 .secao4-div-card h3 {
