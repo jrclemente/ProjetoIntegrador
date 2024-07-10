@@ -50,7 +50,7 @@
     display: flex;
     justify-content: end;
     margin-left: auto;
-    padding: 5px;
+    padding: 5px 5px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -69,7 +69,7 @@
     text-align: left;
     border: 1px solid rgba(9, 218, 30, 0.847);
     border-radius: 15px;
-    margin: 15px;
+    margin: 15px 15px;
     padding: 5px 10px;
 }
 
@@ -117,9 +117,47 @@
 .finalizar-compra {
     width: 100px;
     color: #1c87c9;
+    padding: 5px;
     border: 1px solid rgba(9, 218, 30, 0.847);
     border-radius: 5px;
+}
+
+/* Utilizado quando do acesso ao carrinho sem compra */
+.carrinho-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.mensagem-carrinho-vazio{
+    margin: 10px 0 10px;
+}
+
+.btn-LoginConta {
+    font-size: 20px;
+    /* color: #1c87c9; */
+    color: white;
+    background: rgb(61, 157, 179);
     padding: 5px;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    width: max-content;
+    transition: all 0.3s ease;
+    /* Permite adicionar uma sobra em cada letra do texto */
+    text-shadow: 0 1px 1px #333;
+}
+
+.btn-LoginConta:hover{
+    background: #4ab3c6;
+}
+
+/* Estilizando todos os links de âncora */
+.linkOfertas {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #1c87c9;
+    font-size: 1.5rem;
 }
 
 /* Estilos para dispositivos móveis */

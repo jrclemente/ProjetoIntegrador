@@ -8,7 +8,7 @@ function AnoAtual() {
 
 function GeraImagem(imagem) {
     const dirApp = location.pathname;
-    /* ObtÈm o diretÛrio onde se encontra a aplicaÁ„o principal e montar o diretÛrio para obter a imagem do seu respectivo diretÛrio.
+    /* Obt√©m o diret√≥rio onde se encontra a aplica√ß√£o principal e monta o diret√≥rio para obter a imagem do seu respectivo diret√≥rio.
     */
     let inicio = dirApp.indexOf('indice.html'),
         dirImagem = dirApp.substring(0, (inicio)).concat('imagens/'),
@@ -37,20 +37,20 @@ function objetoVazio(obj) {
 }
 
 function TrocaString(stringORI, vlrSubstituir, novoValor) {
-    let novaString
-    return novaString = stringORI.replace(vlrSubstituir, novoValor).trim()
+    let novaString;    
+    return novaString = stringORI.replace(vlrSubstituir, novoValor).trim();
 }
 
 /**
  * @function GeraBtnAcao
- * @description Realiza a geraÁ„o de botıes de forma din‚mica.
- * @param {string} descricao Define a descriÁ„o que ser· apresentada no bot„o - OBR.
- * @param {string} nomeClasse Define o nome da classe - CSS - que ser· associada ao bot„o - OP.
- * @param {string} id Define o identificador - CSS - que ser· associado ao bot„o - OP.
- * @param {number} acao Define o tipo de aÁ„o que o bot„o far· - Valores: 1(onclick); 2(onsubmit); 3(‚ncora/href) - OBR.
- * @param {string} funcao Define o nome da funÁ„o que ser· executada pelo bot„o - OP.
- * @param {string} link Define o link que ser· chamado pelo bot„o ‚ncora.
- * @returns {object} Retorna o elemento HTML do bot„o gerado din‚micamente.
+ * @description Realiza a gera√ß√£o de bot√µes de forma din√¢mica.
+ * @param {string} descricao Define a descri√ß√£o que ser√° apresentada no bot√£o - OBR.
+ * @param {string} nomeClasse Define o nome da classe - CSS - que ser√° associada ao bot√£o - OP.
+ * @param {string} id Define o identificador - CSS - que ser√° associado ao bot√£o - OP.
+ * @param {number} acao Define o tipo de a√ß√£o que o bot√£o fara - Valores: 1(onclick); 2(onsubmit); 3(√¢ncora/href) - OBR.
+ * @param {string} funcao Define o nome da fun√ß√£o que ser√° executada pelo bot√£o - OP.
+ * @param {string} link Define o link que ser√° chamado pelo bot√£o √¢ncora.
+ * @returns {object} Retorna o elemento HTML do bot√£o gerado dinamicamente.
  * @version 1.0.0
  */
 function GeraBtnAcao(descricao, nomeClasse, id, acao, funcao, link) {
@@ -76,7 +76,7 @@ function GeraBtnAcao(descricao, nomeClasse, id, acao, funcao, link) {
                 };
                 break;
             default:
-                alert(`N„o est· definido o tipo aÁ„o criaÁ„o de bot„o ${acao}`)
+                alert(`N√£o est√° definido o tipo a√ß√£o cria√ß√£o de bot√£o ${acao}`)
                 break;
         }
     } else {

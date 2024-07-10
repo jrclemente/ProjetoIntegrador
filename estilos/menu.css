@@ -81,7 +81,9 @@ header {
     display: none;
     align-items: center;
     justify-content: center;
-    background: lightblue;
+    /* background: lightblue; */
+    background: yellow;
+    color: black;
     border-radius: 50%;
     font-weight: bold;
 }

@@ -199,7 +199,26 @@ if (!isEmptyObject(objProduto)) {
         AtualizaSubTotalHistorico(localStorageLT, qtdeItensCarrinho);
     }
     const divFinalizacaoCompra = GeraBtnFinalizar();
-    cardProduto.append(divFinalizacaoCompra);
+    if ((cardProduto != null) && (typeof cardProduto != "undefined") && (qtdeItensCarrinho > 0)) {
+        cardProduto.append(divFinalizacaoCompra);
+    }else{
+        const cardProduto = document.querySelector('.carrinho-compra');
+        const secaoDivCompra = document.createElement('div');
+        secaoDivCompra.className = 'carrinho-vazio';
+        const mensagem = document.createElement('h1');
+        mensagem.innerHTML = 'Seu carrinho da Manacá está vazio';
+        mensagem.className = 'mensagem-carrinho-vazio';
+        secaoDivCompra.append(mensagem);
+        const linkOfertas = document.createElement('a');
+        linkOfertas.classList = 'linkOfertas';
+        linkOfertas.innerHTML = 'Compre ofertas do dia';
+        linkOfertas.href = '../index.html';
+        secaoDivCompra.append(linkOfertas);
+        const tpAcaoBTN = 3;
+        const btnLogin = GeraBtnAcao('Faça Login na sua Conta', 'btn-LoginConta', '', tpAcaoBTN, 'Login', 'paginas/login.html');
+        secaoDivCompra.append(btnLogin);
+        cardProduto.append(secaoDivCompra);
+    }
     //#endregion
 }
 //#endregion
@@ -519,6 +538,14 @@ function ExcluiCompra(event) {
         if ((subTotal != null) && (typeof subTotal != "undefined")) {
             subTotal.remove();
             window.history.pushState("", "", "/");/* Volta para página principal */
+        }
+        //
+        if (qtdeItensCarrinho == 0) {
+            const cardProdutoEX = document.querySelector('.carrinho-compra');
+            if ((cardProdutoEX != null) && (typeof cardProdutoEX != "undefined")) {
+                cardProdutoEX.remove();
+                location.href = '../../index.html';/* Volta para página principal */
+            }
         }
     }
     return qtdeItensCarrinho;

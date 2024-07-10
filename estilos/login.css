@@ -23,15 +23,20 @@
 }
 
 .login-form input {
-    /* Para colocar uma borda nos campos input e tirar a sombra que a borda coloca */
-    border: 1px solid #ccc;
-    border-radius: 5px;
     /*
-    O primeiro valor é altura do box o segundo início do input, quando utilizado a posição
-    do início do input
+    Define as seguintes margem para o campo: top=0; horizontal(right/left)=0; bottom=20(antes)
     */
+    margin: 0 0 5px;
+    /* Define o preenchimento do campo para as quatro bordas com 10px(top, right, bottom, left) */
     padding: 10px;
-    margin-bottom: 20px;
+    /* Remove a borda padrão do navegador */
+    /* border: none; */
+    /* Remove a borda default(preta) do navegador quando o input é selecionado e permite definir uma nova borda */
+    outline: none;
+    /* border:solid 1px #ccc; */
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    transition: border-color 200ms;
 }
 
 .login-form h1 {
@@ -49,6 +54,7 @@
 .manter-logado {
     display: flex;
     margin-left: -150px;
+    cursor: pointer;
 }
 
 .manter-logado input {
@@ -68,18 +74,25 @@ Estilo do botão submit
 Aplicação de estilo através do atributo de um elemento(tag)
 */
 input[type="submit"] {
-    float: left;
     cursor: pointer;
-    font-size: 20px;
-    color: #fff;
-    text-shadow: 0 1px 1px #333;
     background: rgb(61, 157, 179);
-    border: 1px solid rgba(9, 218, 30, 0.847);
-    border-radius: 5px;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
     margin-bottom: 10px;
-    /* Faz com que os botões fiquem um ao lado do outro */
-    margin-left: 10%;
+    /* Permite adicionar uma sobra em cada letra do texto */
+    text-shadow: 0 1px 1px #333;
+
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    /* transition: all 0.5s linear; */
     transition: all 0.3s ease;
+
+    /* Faz com que os botões fiquem um ao lado do outro */
+    float: left;
+    margin-left: 10%;
+    border: 1px solid rgba(9, 218, 30, 0.847);
 }
 
 input[type="submit"]:hover {

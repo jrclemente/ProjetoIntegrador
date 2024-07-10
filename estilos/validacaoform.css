@@ -1,0 +1,191 @@
+/*
+Estas definições foram criadas tendo como referência:
+https://stackoverflow.com/questions/8639282/notempty-css-selector-is-not-working
+https://blog.elvessousa.com.br/post/validation-css
+*/
+
+/* Algumas destas definições não existem na versão original */
+input:hover {
+    background: #f8f8f8;
+}
+
+/* Contato */
+#contatoNome:focus,
+#contatoEmail:focus {
+    /* border: 2px solid #0969da; */
+    /* Adiciona uma sombra no elemento */
+    /* box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5); */
+    border: 2px solid;
+    background-color: #F7FEFF;
+    border-color: #007185;
+    box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+/* Cadastro */
+#nome_login:focus,
+#data_nasc_cad:focus,
+#sexo_Cad:focus,
+#senha_login:focus,
+#email_cad:focus,
+#senha_Cad:focus,
+#senhaConfir_Cad:focus {
+    /* border: 2px solid #0969da; */
+    /* Adiciona uma sombra no elemento */
+    /* box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5); */
+    border: 2px solid;
+    background-color: #F7FEFF;
+    border-color: #007185;
+    box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+/* Geral */
+input:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid;
+    background-color: #F7FEFF;
+    border-color: #007185;
+    box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+.campo input[type]:focus {
+    border: 2px solid;
+    background-color: #F7FEFF;
+    border-color: #007185;
+    box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+/* Endereço */
+#cep_Cad:focus,
+#tipoEnd_Cad:focus,
+#logradouro_Cad:focus,
+#numero_Cad:focus,
+#bairro_Cad:focus,
+#cidade_Cad:focus,
+#estado_Cad:focus {
+    border: 2px solid;
+    background-color: #F7FEFF;
+    border-color: #007185;
+    box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+/*  */
+
+/* Definições Originais Login/Cadastro */
+.validacaoEmail,
+.validacaoSenha {
+    /* Define as seguintes margem para o campo: top=0; horizontal(right/left)=0; bottom=20(antes) */
+    margin: 0 0 10px;
+    opacity: 0;
+    color: crimson;
+    transition: opacity;
+}
+
+/* Dados Pessoais */
+.validacaoCPF,
+.validacaoCEL,
+.validacaoEmailCad,
+.validacaoSenhaCad,
+.validacaoSenhaConf {
+    margin-top: -5px;
+    opacity: 0;
+    color: crimson;
+    transition: opacity;
+}
+
+/* Endereço */
+.validacaoCEP {
+    margin-top: -5px;
+    opacity: 0;
+    color: crimson;
+    transition: opacity;
+}
+
+/* Estilização para campo válido preenchido */
+input:valid:not([value=""]):not(:placeholder-shown) {
+    border-color: #090;
+    box-shadow: 0 0 0 0.5px #090, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+input:required:valid {
+    border-color: #090;
+    box-shadow: 0 0 0 0.5px #090, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+select:required:valid {
+    border-color: #090;
+    box-shadow: 0 0 0 0.5px #090, 0 1px 2px rgba(15, 17, 15, .15) inset
+}
+
+/* Estilização para campo não válido preenchido */
+input:required:invalid:not(:placeholder-shown) {
+    border-color: crimson;
+}
+
+select:required:invalid:not(:placeholder-shown) {
+    border-color: crimson;
+}
+
+/* Dados Pessoais */
+/* O combinador irmão adjacente + seleciona o elemento que vem imediatamente depois do primeiro elemento. */
+input:required:invalid:not(:placeholder-shown)+.validacaoEmail {
+    opacity: 1;
+}
+
+input:required:invalid:not(:placeholder-shown)+.validacaoSenha {
+    opacity: 1;
+}
+
+input:required:invalid:not(:placeholder-shown)+.validacaoEmailCad {
+    opacity: 1;
+}
+
+input:required:invalid:not(:placeholder-shown)+.validacaoCPF {
+    opacity: 1;
+}
+
+input:required:invalid:not(:placeholder-shown)+.validacaoCEL {
+    opacity: 1;
+}
+
+input:required:invalid:focus:not(:placeholder-shown)+.validacaoSenhaCad {
+    opacity: 1;
+}
+
+input:required:invalid:focus:not(:placeholder-shown)+.validacaoSenhaConf {
+    opacity: 1;
+}
+
+/* Endereço */
+input:required:invalid:not(:placeholder-shown)+.validacaoCEP {
+    opacity: 1;
+}
+
+/* Fim das Definições Originais */
+
+/* Estas definições não existem na versão original */
+input:required:invalid {
+    border-color: crimson;
+}
+
+select:required:invalid {
+    border-color: crimson;
+}
+
+/* Aplica para todos os campos que tem algum pattern de validação não satisfeito */
+input:invalid {
+    border-color: crimson;
+}
+
+/* Sinalização de Obrigatoriedade do campo com estilos dinâmicos */
+.required-popup::after {
+    content: "* Campo obrigatório";
+    color: #DFDFDF;
+    /* font-size: .65rem; */
+    margin-left: 5px;
+    margin-bottom: 2px;
+    /* padding: .2rem .3rem; */
+    width: max-content;
+    background-color: crimson;
+    border-radius: 5px;
+}
