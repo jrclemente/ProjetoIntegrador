@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <base href="/">
+    <link rel="icon" type="image/png" href="/publico/favicon/login.png">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
+    <link rel="stylesheet" href="/estilos/login.css">
+    <link rel="stylesheet" href="/estilos/validacaoform.css">
+    <link rel="stylesheet" href="/estilos/popup.css">
+</head>
+
+<body>
+    <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+    <div id="header"></div>
+
+    <main class="principal-login">
+        <!--FORMULÁRIO DE LOGIN-->
+        <div class="login">
+            <!-- antes: method="post" -->
+            <form class="login-form" method="POST" action="cadastro.html" name="formLogin">
+                <div>
+                    <h1>Fazer Login</h1>
+                </div>
+                <div class="nome-login">
+                    <label for="nome_login">E-mail ou número de telefone celular</label>
+                    <input id="nome_login" name="nome_login" autocomplete="nome_login" required="required" type="email"
+                        placeholder="meu_email@htmlecss.com.br" />
+                    <div class="validacaoEmail"><span>E-mail inválido!</span></div>
+                </div>
+
+                <div class="senha-login">
+                    <label for="senha_login">Senha</label>
+                    <input id="senha_login" name="senha_login" autocomplete="senha_login" required="required"
+                        type="password" placeholder="senha" />
+                    <div class="validacaoSenha"><span>Senha obrigatória!</span></div>
+                </div>
+
+                <div class="manter-logado">
+                    <input type="checkbox" name="manterlogado" id="manterlogado" value="false" />
+                    <!--  &nbsp; para gerar um espaço -->
+                    <label for="manterlogado">&nbsp;Manter-me logado</label>
+                </div>
+
+                <div>
+                    <input id="btnSubmitLogin" type="submit" value="Logar" />
+                </div>
+
+                <p class="link-cadastro">
+                    Ainda não tem conta?
+                    <a href="paginas/cadastro.html" onclick="navigate('/paginas/cadastro')">&nbsp;Cadastre-se</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/util.js" defer></script>
+    <script src="../scripts/popup.js" defer></script>
+    <script src="../scripts/modal.js" defer></script>
+
+    <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
+    <script src="../scripts/jquery/jquery-3.7.1.min.js" defer></script>
+
+    <!-- Script externo com funções para controlar cabeçalho/rodapé -->
+    <script src="../scripts\controladores.js" defer></script>
+
+    <!-- Validação Campos Formulário -->
+    <script type="module" src="../scripts/validacaoform.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <base href="/">
+    <link rel="icon" type="image/png" href="/publico/favicon/login.png">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
+    <link rel="stylesheet" href="/estilos/cadastro.css">
+    <link rel="stylesheet" href="/estilos/tool_tip.css">
+    <link rel="stylesheet" href="/publico/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/estilos/fa.css">
+    <link rel="stylesheet" href="/estilos/validacaoform.css">
+    <link rel="stylesheet" href="/estilos/popup.css">
+</head>
+
+<body>
+    <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+    <div id="header"></div>
+
+    <main class="principal-cadastro">
+        <!--  -->
+        <div class="cadastro">
+            <div class="logo-cadastro">
+                <figure>
+                    <img class="img-cadastro" src="\imagens\3917361.png"
+                        alt="Imagem de um ícone na cor preta sinalizando opção de edição - Lápis e Papel" srcset="">
+                </figure>
+                <p class="titulo-cadastro">Meu Cadastro</p>
+            </div>
+            <div class="campos-obrigatorio">
+                <span>Os campos com (*) são de preenchimento obrigatório e essenciais para processarmos o envio de seu
+                    futuro pedido.</span>
+            </div>
+            <div class="tipo-pessoa">
+                <input type="radio" checked name="tipoPessoa" value="F" /> Pessoa Física
+                <input type="radio" name="tipoPessoa" value="J" /> Pessoa Jurídica
+            </div>
+
+            <!--FORMULÁRIO DE CADASTRO-->
+            <form action="" method="post" id="cadastro" name="formCadastro">
+                <div class="dados-pessoais">
+                    <div class="campo">
+                        <label for="nome_cad">Nome Completo</label>
+                        <input id="nome_cad" name="nome_cad" autocomplete="nome_cad" required pattern="[A-Za-z ']{3,}"
+                            type="text" placeholder="Nome e sobrenome" minlength="3" maxlength="50" size="35"
+                            onfocus='VerificaObr(this)' onblur='RetiraObr(this)' />
+                        <!-- onfocus="this.value=''" -->
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="cpf_cad">CPF</label>
+                        <input type="text" required name="cpf_cad" autocomplete="cpf_cad" id="cpf_cad"
+                            placeholder="999.999.999-99" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" minlength="14"
+                            maxlength="14" size="10" onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                        <div class="validacaoCPF"><span>CPF inválido!</span></div>
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="data_nasc_cad">Data Nascimento</label>
+                        <input type="date" required name="data_nasc_cad" autocomplete="data_nasc_cad" id="data_nasc_cad"
+                            placeholder="" onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="sexo_Cad">Sexo</label>
+                        <select name="sexo_cad" required id="sexo_Cad" onfocus='VerificaObr(this)'
+                            onblur='RetiraObr(this)'>
+                            <option value="" disabled selected hidden>Por favor escolha...</option>
+                            <option value="F">Feminino</option>
+                            <option value="M">Masculino</option>
+                            <option value="N">Não informado</option>
+                            <!-- <option value="V" selected></option> -->
+                        </select>
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="tel_cad">Telefone</label>
+                        <input type="text" name="tel_cad" autocomplete="tel_cad" id="tel_cad"
+                            placeholder="(99) 9999-9999" minlength="13" maxlength="15" size="15"
+                            pattern="\(\d{2}\)\s\d{4}-\d{4}" onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="cel_cad">Celular</label>
+                        <input type="text" name="cel_cad" autocomplete="cel_cad" id="cel_cad"
+                            placeholder="(99) 99999-9999" minlength="13" maxlength="15" size="15"
+                            pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" required
+                            onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                        <div class="validacaoCEL"><span>Celular inválido!</span></div>
+                    </div>
+                    <!--  -->
+                    <div>
+                        <label for="email_cad">E-mail</label>
+                        <input type="email" name="email_cad" autocomplete="email_cad" id="email_cad" required size="40"
+                            placeholder="meu_email@htmlecss.com.br" onfocus='VerificaObr(this)'
+                            onblur='RetiraObr(this)'>
+                        <div class="validacaoEmailCad"><span>E-mail inválido!</span></div>
+                    </div>
+                    <!--  -->
+                    <div>
+                        <label for="senha_Cad">Senha <span class="tooltip"
+                                data-tooltip='A senha deve ter no mínimo 8 caracteres e deve conter pelo menos: um caracter maiúsculo, um número e um caracter especial(*@#$&%)'><i
+                                    class="fa-solid fa-circle-info"></i></span></label>
+                        <input type="password" name="senha_Cad" id="senha_Cad" minlength="8" maxlength="20" required
+                            size="25" autocomplete="new-password" onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                        <div class="validacaoSenhaCad"><span>Senha inválida!</span></div>
+                    </div>
+                    <!--  -->
+                    <div>
+                        <label for="senhaConfir_Cad">Confirme a Senha</label>
+                        <input type="password" name="senhaConfir_Cad" autocomplete="senhaConfir_Cad"
+                            id="senhaConfir_Cad" minlength="8" maxlength="20" required size="25"
+                            autocomplete="new-password" onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                        <div class="validacaoSenhaConf"><span>Confirmação senha inválida!</span></div>
+                    </div>
+                    <!--  -->
+                    <div class="oferta">
+                        <input type="checkbox" id="idOferta" name="Oferta" value="true" checked />
+                        <label for="idOferta">Receber ofertas por e-mail da nossa loja</label>
+                    </div>
+                </div>
+            </form>
+
+            <!--FORMULÁRIO DE ENDERECO-->
+            <div class="logo-endereco">
+                <figure>
+                    <img class="img-cadastro" src="\imagens\3916862.png" alt="Logo marca óleo esseciais manacá colorida"
+                        srcset="">
+                </figure>
+                <p class="titulo-endereco">Meu Endereço</p>
+            </div>
+            <div class="campos-obrigatorio">
+                <span>Os campos com (*) são de preenchimento obrigatório e essenciais para processarmos o
+                    envio de
+                    seu
+                    futuro pedido.</span>
+            </div>
+            <!--  -->
+            <div class="endereco">
+                <form action="" method="post" id="endereco" name="formEndereco">
+                    <div class="campo">
+                        <label for="cep_Cad">CEP</label>
+                        <input type="text" name="cep_Cad" autocomplete="cep_Cad" id="cep_Cad" required minlength="9"
+                            maxlength="9" size="10" placeholder="99999-999" pattern="\d{5}-\d{3}"
+                            onfocus='VerificaObr(this)' onblur='RetiraObr(this)' onfocusout='CEPValido(this)'>
+                        <div class="validacaoCEP"><span>CEP inválido!</span></div>
+                    </div>
+                    <!--  -->
+                    <div>
+                        <label for="tipoEnd_Cad">Tipo Logradouro</label>
+                        <select name="tipoEnd_Cad" required id="tipoEnd_Cad" onfocus='VerificaObr(this)'
+                            onblur='RetiraObr(this)'>
+                            <option value="" disabled selected hidden>Por favor escolha...</option>
+                            <!-- <option value="Rua" selected>Rua</option> -->
+                            <option value="Rua">Rua</option>
+                            <option value="Avenida">Avenida</option>
+                            <option value="Beco">Beco</option>
+                            <option value="Vila">Vila</option>
+                            <option value="Viela">Viela</option>
+                            <option value="Comunidade">Comunidade</option>
+                            <option value="Alameda">Alameda</option>
+                            <option value="Praca">Praça</option>
+                            <option value="Loteamento">Loteamento</option>
+                            <option value="Conjunto">Conjunto</option>
+                            <option value="Nao">Não Informado</option>
+                        </select>
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="logradouro_Cad">Logradouro</label>
+                        <input type="text" name="logradouro_Cad" autocomplete="logradouro_Cad" id="logradouro_Cad"
+                            required minlength="5" maxlength="50" size="50" onfocus='VerificaObr(this)'
+                            onblur='RetiraObr(this)'>
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="numero_Cad">Número</label>
+                        <input type="text" name="numero_Cad" autocomplete="numero_Cad" id="numero_Cad" required
+                            maxlength="10" onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="compl_Cad">Complemento</label>
+                        <input type="text" name="compl_Cad" autocomplete="compl_Cad" id="compl_Cad" maxlength="10"
+                            value="" onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="bairro_Cad">Bairro</label>
+                        <input type="text" name="bairro_Cad" autocomplete="bairro_Cad" id="bairro_Cad" required
+                            minlength="5" maxlength="30" size="30" onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                    </div>
+                    <!--  -->
+                    <div class="campo">
+                        <label for="cidade_Cad">Cidade</label>
+                        <input type="text" name="cidade_Cad" autocomplete="cidade_Cad" id="cidade_Cad" required
+                            onfocus='VerificaObr(this)' onblur='RetiraObr(this)'>
+                    </div>
+                    <!--  -->
+                    <div>
+                        <label for="estado_Cad">Estado</label>
+                        <select name="estado_Cad" required id="estado_Cad" onfocus='VerificaObr(this)'
+                            onblur='RetiraObr(this)'>
+                            <option value="" disabled selected hidden>Por favor escolha...</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="ES">Espirito Santo</option>
+                            <option value="PR">Parana</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <!-- <option value="V" selected></option> -->
+                        </select>
+                    </div>
+                    <!--  -->
+                    <label for="pontoRef_cad">Ponto de Referência</label>
+                    <textarea id="pontoRef_cad" name="pontoRef_cad" rows="4" cols="33" maxlength="100"></textarea>
+            </div>
+            <!-- <div class="enviar-cadastro"> -->
+            <!-- <input type="submit"> -->
+            <!-- <button type='submit'>Enviar</button> -->
+            <!-- </div> -->
+            </form>
+            <!-- <form action="enviaDados.js" method="post" onsubmit="return ValidaDados(this)"> -->
+            <form action="enviaDados.js" method="post">
+                <div class="enviar-cadastro">
+                    <!-- <input id="envia" type="submit" onclick="return ValidaDados(this)"> -->
+                    <!-- <input id="envia" type="submit" onclick="ValidaDados(this)"> -->
+                    <input id="btnSubmit" type="submit" onclick="">
+                    <!-- <button onclick="validarDados(this)" type="submit">Enviar</button> -->
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/util.js" defer></script>
+    <script src="../scripts/popup.js" defer></script>
+    <script src="../scripts/modal.js" defer></script>
+
+
+    <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
+    <script src="../scripts/jquery/jquery-3.7.1.min.js" defer></script>
+
+    <!-- Script externo com funções para controlar cabeçalho/rodapé -->
+    <script src="../scripts/controladores.js" defer></script>
+
+    <!-- Validação Campos Formulário -->
+    <script src="../scripts/validacaoform.js" defer></script>
+</body>
+
+</html>

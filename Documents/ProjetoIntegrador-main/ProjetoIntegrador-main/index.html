@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óleo Essencial Manacá</title>
+    <base href="/">
+    <link rel="icon" type="image/png" href="/publico/favicon/Manaca_M.png">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
+    <link rel="stylesheet" href="/estilos/card.css">
+    <link rel="stylesheet" href="/estilos/lgpd.css">
+    <link rel="stylesheet" href="/estilos/slides.css">
+
+</head>
+
+<body>
+    <!-- A div(class="minhaPagina") é apenas para realização de teste do display:flex -->
+    <div class="minhaPagina">
+        <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+        <div id="header"></div>
+
+        <!-- Novo Conteúdo da Página -->
+        <main class="principal">
+            <div class="principal-apresentacao">
+                <!-- Introdução breve da página -->
+                <h1>Óleos Essenciais Manacá</h1>
+                <article>
+                    Bem-vindos ao Manacá, o maior e-commerce de óleos essenciais
+                    da América Latina! Encontre produtos de qualidade e excelência
+                    no melhor preço do mercado!
+                </article>
+                <br>
+                <div class="slider">
+                    <div class="slides">
+                        <img class="slider" src="/imagens/img/img1.png" alt="Imagem #1">
+                        <img class="slider" src="/imagens/img/img2.png" alt="Imagem #2">
+                        <img class="slider" src="/imagens/img/img3.png" alt="Imagem #3">
+                        <!-- <img class="slider" src="/imagens/img/img4.jpg" alt="Imagem #4"> -->
+                    </div>
+                    <button class="anterior" onclick="slideAnte()">&#10094</button>
+                    <button class="posterior" onclick="slidePoste()">&#10095</button>
+                </div>
+                <br>
+                <h2>Veja algumas de nossas seleções</h2>
+            </div>
+            <!-- Exibe os cards -->
+            <section class="secao4">
+                <!-- Conteúdo da página é carregado aqui dinamicamente -->
+            </section>
+            <div id="conteudoLGPDlgpd"></div>
+        </main>
+        <!--  -->
+
+        <div id="footer"></div>
+    </div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/util.js" defer></script>
+    <script src="scripts/slides.js" defer></script>
+
+    <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
+    <script src="./scripts/jquery/jquery-3.7.1.min.js" defer></script>
+
+    <!-- Script externo com funções para controlar cabeçalho/rodapé -->
+    <script src="scripts\controladores.js" defer></script>
+
+    <script type="module" src="\db\obtemprodutos.js" defer></script>
+</body>
+
+</html>

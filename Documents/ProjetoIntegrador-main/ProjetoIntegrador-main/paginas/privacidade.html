@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade e Termos de Uso</title>
+    <base href="/">
+    <link rel="icon" type="image/png" href="\publico\favicon\seguranca.png">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
+</head>
+
+<body>
+    <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+    <div id="header"></div>
+
+    <main class="principal-politica">
+        <div class="Privacidade-TermoUso">
+            <!-- Ancorando pontos específicos de uma página: #idPolitica / #idTermos -->
+            <div class="politica-privacidade">
+                <h2 id="idPolitica"> <a href="#politica">Política de Privacidade e Proteção de Dados Pessoais</a>
+                </h2>
+                <p>Nossa política de privacidade descreve como coletamos, usamos e protegemos as informações
+                    pessoais
+                    dos
+                    nossos usuários. Ao utilizar nosso site, você concorda com as práticas descritas nesta política.
+                </p>
+                <p>Para mais detalhes, consulte nossa <a href="\paginas\politicaprivacidade.html">Política de Privacidade completa</a>.</p>
+            </div>
+            <div class="termos-uso">
+                <h2 id="idTermos"> <a href="#termos">Termos de Uso</a></h2>
+                <p>Ao acessar ou usar nosso site, você concorda em cumprir estes Termos de Uso. Esteja ciente de que
+                    podemos
+                    atualizar ou modificar estes termos periodicamente, e é sua responsabilidade revisá-los
+                    regularmente.
+                </p>
+                <p>Para mais detalhes, consulte nossos <a href="\paginas\termouso.html">Termos de Uso completos</a>.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/util.js" defer></script>
+
+    <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
+    <script src="../scripts/jquery/jquery-3.7.1.min.js" defer></script>
+
+    <!-- Script externo com funções para controlar cabeçalho/rodapé -->
+    <script src="../scripts/controladores.js" defer></script>
+</body>
+
+</html>

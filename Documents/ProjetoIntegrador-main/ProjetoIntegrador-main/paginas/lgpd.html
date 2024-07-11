@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LGPD</title>
+    <link rel="stylesheet" href="/estilos/lgpd.css">
+</head>
+
+<main>
+    <div class="cookies-mgs" id="cookies-mgs">
+        <div class="cookies-txt">
+            <!-- Ancorando pontos específicos de uma página: #idPolitica / #idTermos -->
+            <p class="msg-cookies">Este site armazena dados em cookies para habilitar
+                funcionalidades essenciais e proporcionar a melhor experiência no nosso website.
+                Entenda mais através de nossa <a class="alert-link" href="paginas/privacidade.html#idPolitica" onclick="navigate('paginas/privacidade')">Política de
+                    Privacidade</a> e
+                <a class="alert-link" href="paginas/privacidade.html#idTermos" onclick="navigate('paginas/privacidade')">Termos de Uso.</a><br>
+                Ao continuar navegando, você concorda com o nosso uso de cookies.
+            </p>            
+
+            <div class="cookies-btn">
+                <div>
+                    <button id="btn-Aceitar" onclick="Aceitar()">Aceitar Todos</button>
+                </div>
+                <div>
+                    <button id="btn-Personalizar" onclick="Personalizar()">Personalizar</button>
+                </div>
+                <div>
+                    <button id="btn-desabilitar" onclick="Desabilitar()">Desabilitar Todos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/lgpd.js" defer></script>
+</main>
+
+</html>

@@ -1,0 +1,46 @@
+/* Define um valor da fonte padrão tendo com referência 16px */
+html {
+    font-size: 62.5%;
+}
+
+.tooltip {
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.tooltip:before {
+    display: none;
+    width: 200px;
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 15px;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    background: #fff;
+    text-align: center;
+}
+
+.tooltip:after {
+    display: none;
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: calc(50% - 10px);
+    transform: translateX(-50%);
+    rotate: 270deg;
+    border: 10px solid;
+    border-color: transparent rgba(9, 218, 30, 0.847) transparent transparent;
+    margin-bottom: 5.3px;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}

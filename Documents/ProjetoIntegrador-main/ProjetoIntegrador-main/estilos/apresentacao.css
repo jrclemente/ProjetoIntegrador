@@ -1,0 +1,4 @@
+.apresentacaoProduto {
+    /* Para que os itens fiquem abaixo do cabeçalho, quando este é definido como fixo */
+    padding-top: 170px;
+}

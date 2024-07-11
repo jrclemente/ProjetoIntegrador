@@ -1,0 +1,111 @@
+.contato-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Para que os itens fiquem abaixo do cabeçalho, quando este é definido como fixo */
+    padding-top: 160px;
+}
+
+.contato-principal h2 {
+    text-align: center;
+}
+
+.entre-contato {
+    margin-bottom: 10px;
+}
+
+.entre-contato p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.contato-form {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contato-email label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contato-form input {
+    /*
+    Define as seguintes margem para o campo: top=0; horizontal(right/left)=0; bottom=20(antes)
+    */
+    margin: 0 0 5px;
+    /* Define o preenchimento do campo para as quatro bordas com 10px(top, right, bottom, left) */
+    padding: 10px;
+    width: 100%;
+    /* Remove a borda padrão do navegador */
+    /* border: none; */
+    /* Remove a borda default(preta) do navegador quando o input é selecionado e permite definir uma nova borda */
+    outline: none;
+    /* border:solid 1px #ccc; */
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    transition: border-color 200ms;
+}
+
+.contato-form textarea {
+    /* Define as seguintes margem para o campo: top=0; horizontal(right/left)=0; bottom=10 */
+    padding: 0px 10px;
+    /* Para retirar a opção de expandir  */
+    resize: none;
+    width: 427px;
+    /* Remove a borda padrão do navegador */
+    /* border: none; */
+    /* Remove a borda default(preta) do navegador quando o input é selecionado e permite definir uma nova borda */
+    outline: none;
+    /* border: solid 1px #ccc; */
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    transition: border-color 200ms;
+}
+
+.contato-botao {
+    position: relative;
+    margin: 5px;
+}
+
+.contato-whatsapp {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*
+Estilo do botão submit/reset
+Aplicação de estilo através do atributo de um elemento(tag)
+*/
+input[type="submit"],
+input[type="reset"] {
+    /* Faz com que os botões fiquem um ao lado do outro */
+    float: left;
+    width: 30% !important;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+    align-items: center;
+    background: rgb(61, 157, 179);
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    padding: 8px 5px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Aplicação de estilo através do atributo de um elemento(tag) */
+input[type="submit"]:hover {
+    background: #4ab3c6;
+}
+
+input[type="reset"]:hover {
+    background: #4ab3c6;
+}

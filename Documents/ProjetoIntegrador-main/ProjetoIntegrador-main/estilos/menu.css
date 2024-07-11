@@ -1,0 +1,130 @@
+header {
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    /* Para que as imagens possam ficar "escondidas" atras do menu */
+    background-image: linear-gradient(to right, #98c5e3, #1772d9);
+}
+
+header {
+    /*
+    Quando definir o cabeçalho como fixo, deve-se definir posição 0 em relação
+    à margen direita(right)/esqueda(left) do navegador
+    https://www.ranoya.com/books/public/css/css-right.php#:~:text=Atrav%C3%A9s%20do%20atributo%20right%20%C3%A9,rela%C3%A7%C3%A3o%20a%20sua%20borda%20direita.
+    https://www.ranoya.com/books/public/css/css-left.php#:~:text=Atrav%C3%A9s%20do%20atributo%20left%20%C3%A9,rela%C3%A7%C3%A3o%20a%20sua%20borda%20esquerda.
+    */
+    position: fixed;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 10 Top; 20 Right; 10 Botton e 20 Left) - Sempre no sentido horário*/
+    padding: 10px 20px;
+}
+
+.titulo-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.menu ul {
+    display: flex;
+    /* Define 50px entre cada um dos itens do menu. Evita a utilização do margin: right/left */
+    gap: 50px;
+    font-size: 1.5rem;
+    padding: 10px;
+    /* Retira a bolinha na frente do item de menu */
+    list-style-type: none;
+}
+
+.login-carrinho {
+    display: flex;
+    align-items: center;
+}
+
+.login-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnLogin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    background: rgb(233, 231, 231);
+    border: 2px solid rgba(9, 218, 30, 0.847);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.carrinho {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrinhoCompraMenu {
+    /* Para definir uma borda em volta de uma imagem/figura */
+    border: 2px solid rgba(9, 218, 30, 0.847);
+    border-radius: 10px;
+    background: rgb(233, 231, 231);
+    padding: 5px;
+    margin: 10px;
+}
+
+.qtde-carrinho {
+    width: 20px;
+    height: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    /* background: lightblue; */
+    background: yellow;
+    color: black;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.visible {
+    display: inline-flex;
+}
+
+.btnLogin:hover {
+    color: white;
+    background-color: #1c87c9;
+    border: 2px solid rgba(9, 218, 30, 0.847);
+    /* border-radius: faz com que as bordas fiquem arredondadas conforme o valor definido */
+    border-radius: 10px;
+}
+
+.carrinhoCompraMenu a :hover {
+    background-color: transparent;
+}
+
+.carrinhoCompraMenu:hover {
+    border: 2px solid rgba(9, 218, 30, 0.847);
+    /* border-radius: faz com que as bordas fiquem arredondadas conforme o valor definido */
+    border-radius: 10px;
+}
+
+.imgLogo {
+    max-width: 100px;
+    max-height: 99px;
+    width: auto;
+    height: auto;
+}
+
+.link-logo:hover {
+    background-color: transparent;
+    border: transparent;
+}
+
+.imgCarrinho {
+    max-width: 24px;
+    max-height: 24px;
+    width: auto;
+    height: auto;
+}
