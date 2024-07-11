@@ -1,0 +1,52 @@
+.slider {
+    position: relative;
+    display: flex;
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+}
+
+img.mostrarSlide {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    width: auto;
+    margin-top: -22px;
+    padding: 10px 15px;
+    transition: 0.6s ease;
+    border: none;
+    user-select: none;
+}
+
+.slider button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.anterior {
+    left: 0;
+}
+
+.posterior {
+    right: 0;
+}
+
+@keyframes fade {
+    from {opacity: .5;}
+    to {opacity: 1;}
+}

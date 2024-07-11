@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <base href="/">
+    <link rel="icon" type="image/png" href="\publico\favicon\profile.png">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
+    <link rel="stylesheet" href="/estilos/contato.css">
+    <link rel="stylesheet" href="/estilos/validacaoform.css">
+    <link rel="stylesheet" href="/estilos/popup.css">
+</head>
+
+<body>
+    <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+    <div id="header"></div>
+
+    <main class="contato-principal">
+        <!-- Conteúdo da página será carregado aqui -->
+        <div class="entre-contato">
+            <h2>Entre em Contato Conosco</h2>
+            <p>Se tiver alguma dúvida ou precisar de mais informações, não hesite em nos contatar.</p>
+            <p>Telefone: (99) 9 9999-9999</p>
+        </div>
+
+        <div class="contato-email">
+            <form class="contato-form" action="EnvioContato" method="POST" enctype="text/plain" name="formContato">
+
+                <div class="nomeContato">
+                    <label for="contatoNome">Nome</label>
+                    <input type="text" required name="contatoNome" id="contatoNome"
+                        placeholder="Informe nome e sobrenome">
+                </div>
+                <div class="emailContato">
+                    <label for="contatoEmail">E-mail</label>
+                    <input type="email" required name="contatoEmail" id="contatoEmail" placeholder="meu_email@com.br">
+                </div>
+                <div class="mensContato">
+                    <label for="contatoMensagem">Mensagem</label>
+                    <textarea id="contatoMensagem" required name="contatoMensagem" rows="5" cols="35" maxlength="200"
+                        style="resize: none" placeholder="Informe aqui a sua mensagem (até 250 caracteres)"></textarea>
+                </div>
+                <div class="contato-botao">
+                    <div class="idEnviar">
+                        <input id="btnSubmitContato" type="submit" value="Enviar">
+                        <!-- <button type='submit'>Enviar</button> -->
+                    </div>
+                    <div class="idLimpar">
+                        <input type="reset" value="Limpar">
+                        <!-- <button type='submit'>Enviar</button> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="contato-whatsapp">
+            <a class="whatsapp" href="https://wa.me/5531999999999" target="_blank">
+                <img class="idimgwtsapp" src="../imagens/DSxOAUB0raA.png" alt="Imagem com o ícone oficial do WhatsApp">
+                <!-- <img src="../imagens//whatsapp.png" alt="Imagem com o ícone oficial do WhatsApp" width="80px"> -->
+            </a>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/util.js" defer></script>
+    <script src="../scripts/popup.js" defer></script>
+    <script src="../scripts/modal.js" defer></script>
+
+    <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
+    <script src="../scripts/jquery/jquery-3.7.1.min.js" defer></script>
+
+    <!-- Script externo com funções para controlar cabeçalho/rodapé -->
+    <script src="../scripts/controladores.js" defer></script>
+
+     <!-- Validação Campos Formulário -->
+     <script src="../scripts/validacaoform.js" defer></script>
+</body>
+
+</html>

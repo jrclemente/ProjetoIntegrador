@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <base href="/">
+    <link rel="icon" type="image/png" href="\publico\favicon\carrinho-de-compras.png">
+    <link rel="stylesheet" href="/estilos/styles.css">
+    <link rel="stylesheet" href="/estilos/menu.css">
+    <link rel="stylesheet" href="/estilos/compra.css">
+    <link rel="stylesheet" href="/estilos/carrinho.css">
+</head>
+
+<body>
+    <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+    <div id="header"></div>
+
+    <main class="principal-carrinho">
+        <section class="carrinho-compra">
+            <!-- <h2>Carrinho de Compras</h2> -->
+            <!-- Aqui você pode exibir os itens do carrinho e permitir que o usuário atualize ou remova os itens -->
+            <!-- <p>Seu carrinho está vazio.</p> -->
+            <!-- <a href="produtos.html">Continuar comprando</a> -->
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/util.js" defer></script>
+    <script src="/scripts/jquery/jquery-3.7.1.min.js" defer></script>
+
+    <!-- Script externo de função com algumas funções de trabalho  -->
+    <script src="/scripts/controladores.js" defer></script>
+
+    <script src="/db/localstorage.js" defer></script>
+    <script src="/db/gerasubtotal.js" defer></script>
+    <script type="module" src="/db/montadadoscompra.js" defer></script>    
+</body>
+
+</html>

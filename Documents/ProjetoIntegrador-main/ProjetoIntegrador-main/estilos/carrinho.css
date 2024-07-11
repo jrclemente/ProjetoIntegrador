@@ -1,0 +1,168 @@
+.principal-carrinho {
+    padding-top: 190px;
+    margin-bottom: 100px;
+}
+
+.carrinho-compra {
+    width: calc(80% / 2);
+    display: flex;
+    /* flex-wr: Define se os itens flexíveis são forçados a ficarem na mesma linha 
+    ou se podem ser quebradas em varias linhas.
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-wrap
+    */
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 15px;
+    padding: 10px;
+    /* Para centralizar */
+    margin: auto;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.secao-compra:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.fecharCompras {
+    width: min-content;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carrinho-compra .titulo-compra {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.excluir {
+    width: min-content;
+    display: flex;
+    justify-content: end;
+    margin-left: auto;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secao-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produto-compra,
+.produto-compra-LS {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    text-align: left;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 15px;
+    margin: 15px 15px;
+    padding: 5px 10px;
+}
+
+.produto-compra #img {
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.produto-compra-LS #img {
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.valor-compra {
+    font-weight: bold;
+}
+
+.fecharCompras:hover {
+    width: max-content;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.excluir:hover {
+    width: max-content;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.continuar-finalizar-compra {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+.continuar-comprado {
+    width: 100px;
+    color: #1c87c9;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.finalizar-compra {
+    width: 100px;
+    color: #1c87c9;
+    padding: 5px;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+}
+
+/* Utilizado quando do acesso ao carrinho sem compra */
+.carrinho-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.mensagem-carrinho-vazio{
+    margin: 10px 0 10px;
+}
+
+.btn-LoginConta {
+    font-size: 20px;
+    /* color: #1c87c9; */
+    color: white;
+    background: rgb(61, 157, 179);
+    padding: 5px;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 5px;
+    width: max-content;
+    transition: all 0.3s ease;
+    /* Permite adicionar uma sobra em cada letra do texto */
+    text-shadow: 0 1px 1px #333;
+}
+
+.btn-LoginConta:hover{
+    background: #4ab3c6;
+}
+
+/* Estilizando todos os links de âncora */
+.linkOfertas {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #1c87c9;
+    font-size: 1.5rem;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .carrinho-compra {
+        width: 100%;
+    }
+}

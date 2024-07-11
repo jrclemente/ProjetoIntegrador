@@ -1,0 +1,100 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.login-form {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+    border-radius: 10px;
+}
+
+#nome_login {
+    width: 300px;
+}
+
+#senha_login {
+    width: 250px;
+}
+
+.login-form input {
+    /*
+    Define as seguintes margem para o campo: top=0; horizontal(right/left)=0; bottom=20(antes)
+    */
+    margin: 0 0 5px;
+    /* Define o preenchimento do campo para as quatro bordas com 10px(top, right, bottom, left) */
+    padding: 10px;
+    /* Remove a borda padrão do navegador */
+    /* border: none; */
+    /* Remove a borda default(preta) do navegador quando o input é selecionado e permite definir uma nova borda */
+    outline: none;
+    /* border:solid 1px #ccc; */
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    transition: border-color 200ms;
+}
+
+.login-form h1 {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+}
+
+.senha-login {
+    margin-left: -50px;
+}
+
+.manter-logado {
+    display: flex;
+    margin-left: -150px;
+    cursor: pointer;
+}
+
+.manter-logado input {
+    /* Redefine o tamanho do checkbox - Display Flex interfere neste tipo de elemento */
+    min-width: 20px;
+    min-height: 20px;
+    margin-right: 5px;
+}
+
+.link-cadastro {
+    /* top / right / bottom / left */
+    margin: 10px 0 10px 0;
+}
+
+/*
+Estilo do botão submit
+Aplicação de estilo através do atributo de um elemento(tag)
+*/
+input[type="submit"] {
+    cursor: pointer;
+    background: rgb(61, 157, 179);
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    /* Permite adicionar uma sobra em cada letra do texto */
+    text-shadow: 0 1px 1px #333;
+
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    /* transition: all 0.5s linear; */
+    transition: all 0.3s ease;
+
+    /* Faz com que os botões fiquem um ao lado do outro */
+    float: left;
+    margin-left: 10%;
+    border: 1px solid rgba(9, 218, 30, 0.847);
+}
+
+input[type="submit"]:hover {
+    background: #4ab3c6;
+}
