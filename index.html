@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/estilos/menu.css">
     <link rel="stylesheet" href="/estilos/card.css">
     <link rel="stylesheet" href="/estilos/lgpd.css">
+    <link rel="stylesheet" href="/estilos/slides.css">
 </head>
 
 <body>
@@ -29,6 +30,18 @@
                     da América Latina! Encontre produtos de qualidade e excelência
                     no melhor preço do mercado!
                 </article>
+                <br>
+                <div class="slider">
+                    <div class="slides">
+                        <img class="slider" src="/imagens/img/img1.png" alt="Imagem #1">
+                        <img class="slider" src="/imagens/img/img2.png" alt="Imagem #2">
+                        <img class="slider" src="/imagens/img/img3.png" alt="Imagem #3">
+                        <!-- <img class="slider" src="/imagens/img/img4.jpg" alt="Imagem #4"> -->
+                    </div>
+                    <button class="anterior" onclick="slideAnte()">&#10094</button>
+                    <button class="posterior" onclick="slidePoste()">&#10095</button>
+                </div>
+                <br>
                 <p>Veja algumas de nossas seleções</p>
             </div>
             <!-- Exibe os cards -->
@@ -45,6 +58,7 @@
     <!-- Declaração dos Scripts -->
     <script src="scripts/script.js" defer></script>
     <script src="scripts/util.js" defer></script>
+    <script src="scripts/slides.js" defer></script>
 
     <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
     <script src="./scripts/jquery/jquery-3.7.1.min.js" defer></script>
