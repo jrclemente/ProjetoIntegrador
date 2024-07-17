@@ -36,15 +36,16 @@ function GeraModal(titulo, mensagem, tipoMens) {
     }
 
     dialogModal.appendChild(elementMensagem);
-    GeraBotao(dialogModal);
+    GeraBotao(dialogModal, tipoMens);
     body.appendChild(dialogModal)
 }
 
-function GeraBotao(dialogModal) {
+function GeraBotao(dialogModal, tipoMens) {
     let button = document.createElement('button');
+    button.id = 'btnPopUP';
     button.innerHTML = 'OK';
     button.onclick = function () {
-        FecharPopUp();
+        FecharPopUp(tipoMens);
     }
     dialogModal.appendChild(button);
 }
@@ -58,12 +59,15 @@ function AbrirPopUp(titulo, mensagem, tipoMens) {
     modal.showModal()
 }
 
-function FecharPopUp() {
+function FecharPopUp(tipoMens) {
     const modal = document.querySelector('dialog');
     if ((modal != null) && (typeof modal != 'undefined')) {
         modal.close();
         modal.style.display = 'none';
         modal.remove();
+        if (tipoMens == 2) {
+            location.href = '../../index.html';
+        }
     }
 }
 

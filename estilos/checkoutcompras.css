@@ -1,0 +1,163 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+}
+
+/* Define um valor da fonte padrão tendo com referência 16px (1rem=10px) */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.5rem;
+}
+
+.chekout {
+    padding-top: 17rem;
+    margin: 0 1rem;
+    margin-bottom: 5rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.6rem;
+}
+
+.tituloH3 {
+    margin: 2rem 0 2rem;
+}
+
+.tituloH4 {
+    margin: 2.25rem 0 2.25rem;
+}
+
+.horizontal {
+    margin: 0.85rem 0 0.85rem;
+}
+
+.col-25 {
+    flex: 25%;
+}
+
+.col-50 {
+    flex: 50%;
+}
+
+.col-75 {
+    flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+    padding: 0 1.6rem;
+}
+
+.container {
+    background-image: linear-gradient(to right, #98c5e3, #1772d9);
+    padding: .5rem 2rem 1.5rem 2rem;
+    border: 0.1rem solid rgba(9, 218, 30, 0.847);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 0.1rem solid lightblue;
+    border-radius: 0.5rem;
+    transition: border-color 200ms;
+}
+
+label {
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0.7rem 0;
+    font-size: 2.4rem;
+    border: 0.1rem solid rgba(9, 218, 30, 0.847);
+    border-radius: 0.5rem;
+}
+
+.btnCobranca {
+    background-color: #04AA6D;
+    color: #fff;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.7rem;
+
+    text-shadow: 0 1px 1px #333;
+
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+
+    transition: all 0.3s ease;
+}
+
+.btnCobranca:hover {
+    background: rgba(9, 218, 30, 0.847);
+}
+
+.produto_Checkout a {
+    color: #2196F3;
+}
+
+hr {
+    border: 1px solid lightgrey;
+}
+
+.produto {
+    margin: 1.7rem 0 1.7rem;
+}
+
+.precoUni,
+.precoTotal {
+    float: right;
+    color: black;
+    font-weight: bold;
+}
+
+.totalCkeckout {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.qtdeCheckout {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    /* float: right; */
+    color: black;
+    font-weight: bold;
+    background: yellow;
+    border-radius: 100%;
+}
+
+/* Layout responsivo - quando a tela tiver menos de 800px de largura, faça com que as duas colunas sejam empilhadas uma em cima da outra em vez de uma ao lado da outra (mude também a direção - faça a coluna "carrinho" ficar no topo) */
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .col-25 {
+        margin-bottom: 2rem;
+    }
+}

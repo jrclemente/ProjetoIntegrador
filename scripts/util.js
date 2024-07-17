@@ -37,8 +37,18 @@ function objetoVazio(obj) {
 }
 
 function TrocaString(stringORI, vlrSubstituir, novoValor) {
-    let novaString;    
+    let novaString;
     return novaString = stringORI.replace(vlrSubstituir, novoValor).trim();
+}
+
+function ObtemNumeroProtocolo() {
+    // A composição deste protocolo é: AAAAMMDD + um numero aleatório de 4 digitos
+    var data = new Date();
+    // Adicionar 1 para "normalizar" o valor do mês.
+    const dia = String(data.getDate()).padStart(2, '0'),
+        mes = String((data.getMonth() + 1)).padStart(2, '0'),
+        ano = data.getFullYear();
+    return (`${ano}${mes}${dia}-${Math.floor(1000 + Math.random() * 9000)}`);
 }
 
 /**

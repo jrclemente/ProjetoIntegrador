@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compras</title>
+    <base href="/">
+    <link rel="icon" type="image/png" href="/publico/favicon/PagSeguro.png">
+    <link rel="stylesheet" href="/estilos/menu.css">
+    <link rel="stylesheet" href="/publico/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/estilos/checkoutcompras.css">
+    <link rel="stylesheet" href="/estilos/validacaoform.css">
+    <link rel="stylesheet" href="/estilos/popup.css">
+</head>
+
+<body>
+    <!-- Está sendo utilizado o menu definido no include e referenciado através id='header' -->
+    <div id="header"></div>
+    <div class="chekout">
+        <div class="row">
+            <div class="col-75">
+                <div class="container">
+                    <form action="" method="post" id="combrancaCompras" name="formCobrCompras">
+                        <div class="row">
+                            <div class="col-50">
+                                <h3 class="tituloH3">Endereço de Cobrança</h3>
+                                <label for="nomeCobr"><i class="fa fa-user"></i> Nome Completo</label>
+                                <input type="text" id="nomeCobr" name="nomeCobr" autocomplete="nomeCobr" required
+                                    placeholder="">
+                                <label for="cpfCobr"><i class="fa fa-id-card"></i> CPF</label>
+                                <input type="text" id="cpfCobr" name="cpfCobr" autocomplete="cpfCobr" required
+                                    placeholder="999.999.999-99" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" minlength="14"
+                                    maxlength="14">
+                                <label for="emailCobr"><i class="fa fa-envelope"></i> E-mail</label>
+                                <input type="text" id="emailCobr" name="emailCobr" autocomplete="emailCobr" required
+                                    placeholder="meu_email@example.com">
+                                <label for="endCobr"><i class="fa-regular fa-address-card"></i> Endereço</label>
+                                <input type="text" id="endCobr" name="endCobr" autocomplete="endCobr" required
+                                    placeholder="">
+                                <!--  -->
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="numEndCobr"><i class="fa-solid fa-list-ol"></i> Número</label>
+                                        <input type="text" id="numEndCobr" name="numEndCobr" autocomplete="numEndCobr"
+                                            required placeholder="" maxlength="15">
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="bairroEndCobr"><i class="fa-regular fa-address-card"></i>
+                                            Bairro</label>
+                                        <input type="text" id="bairroEndCobr" name="bairroEndCobr"
+                                            autocomplete="bairroEndCombr" required placeholder="" maxlength="40">
+                                    </div>
+                                </div>
+                                <!--  -->
+                                <label for="cidadeCobr"><i class="fa-solid fa-city"></i> Cidade</label>
+                                <input type="text" id="cidadeCobr" name="cidadeCobr" autocomplete="cidadeCobr" required
+                                    placeholder="">
+
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="estadoCobr">Estado</label>
+                                        <select id="estadoCobr" name="estadoCobr" required>
+                                            <option value="" disabled selected hidden>Por favor escolha...</option>
+                                            <option value="AC">Acre</option>
+                                            <option value="AL">Alagoas</option>
+                                            <option value="AP">Amapá</option>
+                                            <option value="AM">Amazonas</option>
+                                            <option value="BA">Bahia</option>
+                                            <option value="CE">Ceará</option>
+                                            <option value="DF">Distrito Federal</option>
+                                            <option value="ES">Espírito Santo</option>
+                                            <option value="GO">Goiás</option>
+                                            <option value="MA">Maranhão</option>
+                                            <option value="MT">Mato Grosso</option>
+                                            <option value="MS">Mato Grosso do Sul</option>
+                                            <option value="MG">Minas Gerais</option>
+                                            <option value="PA">Pará</option>
+                                            <option value="PB">Paraíba</option>
+                                            <option value="PR">Paraná</option>
+                                            <option value="PE">Pernambuco</option>
+                                            <option value="PI">Piauí</option>
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="RN">Rio Grande do Norte</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                            <option value="RO">Rondônia</option>
+                                            <option value="RR">Roraima</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="SP">São Paulo</option>
+                                            <option value="SE">Sergipe</option>
+                                            <option value="TO">Tocantins</option>
+                                            <option value="EX">Estrangeiro</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cepCobr">CEP</label>
+                                        <input type="text" id="cepCobr" name="cepCobr" autocomplete="cepCobr" required
+                                            placeholder="99999-999">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-50">
+                                <h3 class="tituloH3">Pagamento</h3>
+                                <label for="cartoes">Cartões Aceitos</label>
+                                <div class="icon-container">
+                                    <i><img src="/imagens/cartoes/Pague_Seguro2.png"
+                                            alt="Imagem verde claro do símbolo pague seguro - cadeado - com a descrição: Pague Seguro em verde"></i>
+                                    <div class="cartoes">
+                                        <i><img src="/imagens/cartoes/Cartao_Visa2.png" alt="Cartão Crédito Visa"></i>
+                                        <i><img src="/imagens/cartoes/Cartao_MasterCard.png"
+                                                alt="Cartão Crédito MasterCard"></i>
+                                        <i><img src="/imagens/cartoes/Cartao_Hipercard.png"
+                                                alt="Cartão Crédito HiperCard"></i>
+                                        <i><img src="/imagens/cartoes/Cartao_Elo.png" alt="Cartão Crédito Elo"></i>
+                                        <i><img src="/imagens/cartoes/Cartao_Paypal.png"
+                                                alt="Cartão Crédito Paypal"></i>
+                                        <i><img src="/imagens/cartoes/Cartao_Amex.png"
+                                                alt="Cartão Crédito America Express"></i>
+                                        <i><img src="/imagens/cartoes/Boleto.png" alt="Boleto Cobrança"></i>
+                                    </div>
+                                </div>
+                                <label for="nomeCartao"><i class="fa fa-user"></i> Nome no Cartão</label>
+                                <input type="text" id="nomeCartao" name="nomeCartao" autocomplete="nomeCartao" required
+                                    placeholder="Conforme está no cartão">
+                                <label for="nrCartao"><i class="fa-solid fa-credit-card"></i> Cartão Crédito</label>
+                                <input type="text" id="nrCartao" name="nrCartao" autocomplete="nrCartao" required
+                                    placeholder="1111-2222-3333-4444">
+
+                                <label for="mesValCartao"><i class="fa-regular fa-calendar-days"></i> Mês
+                                    Validade</label>
+                                <select id="mesValCartao" name="mesValCartao" required>
+                                    <option value="" disabled selected hidden>Por favor escolha...</option>
+                                    <option value="01">Janeiro</option>
+                                    <option value="02">Fevereiro</option>
+                                    <option value="03">Março</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Maio</option>
+                                    <option value="06">Junho</option>
+                                    <option value="07">Julho</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Setembro</option>
+                                    <option value="10">Outubro</option>
+                                    <option value="11">Novembro</option>
+                                    <option value="12">Dezembro</option>
+                                </select>
+                                <div class="row">
+                                    <div class="col-50">
+                                        <label for="anoValCartao"><i class="fa-regular fa-calendar-days"></i> Ano
+                                            Validade</label>
+                                        <select id="anoValCartao" name="anoValCartao" required>
+                                            <option value="" disabled selected hidden>Por favor escolha...</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                            <option value="2032">2032</option>
+                                            <option value="2033">2033</option>
+                                            <option value="2034">2034</option>
+                                            <option value="2035">2035</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-50">
+                                        <label for="cvcCartao">CVC</label>
+                                        <input type="text" id="cvcCartao" name="cvcCartao" autocomplete="cvcCartao"
+                                            required placeholder="999" data-tooltip="Valor de Verificação do Cartão">
+                                    </div>
+                                </div>
+                                <!-- Parcelas  -->
+                                <div class="row">
+                                    <div class="col-25">
+                                        <label for="parcelasPagto"><i class="fa-solid fa-brazilian-real-sign"></i>
+                                            Parcelas</label>
+                                        <select id="parcelasPagto" name="parcelasPagto" required>
+                                            <option value="" disabled selected hidden>Por favor escolha...</option>
+                                            <option>1 - R$ xx,xx</option>
+                                            <option>2x - R$ xx,xx</option>
+                                            <option>3x - R$ xx,xx</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+
+                        </div>
+                        <label>
+                            <input type="checkbox" checked="checked" name="endEntregaCobr" value="true"> Endereço de
+                            entrega
+                            igual ao de
+                            cobrança
+                        </label>
+                        <input class="btnCobranca" id="btnSubmitCbr" type="submit"
+                            value="Continuar para Finalizar a Compra" onclick="">
+                    </form>
+                </div>
+            </div>
+            <!-- Carrinho e Subtotal/Total -->
+            <div class="col-25">
+                <div class="container">
+                    <h4 class="tituloH4">Carrinho <span class="qtdeCheckout"><i class="fa fa-shopping-cart"></i>
+                            nn</span>
+                    </h4>
+                    <div class="produto_Checkout">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <!-- Declaração dos Scripts -->
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/util.js" defer></script>
+    <script src="../scripts/popup.js" defer></script>
+    <script src="../scripts/modal.js" defer></script>
+
+    <!-- É através do jquery que é possível definir o cabeçalho/rodapé como include -->
+    <script src="../scripts/jquery/jquery-3.7.1.min.js" defer></script>
+
+    <!-- Script externo com funções para controlar cabeçalho/rodapé -->
+    <script src="../scripts/controladores.js" defer></script>
+
+    <!-- Monta Itens do Checkout de Compras -->
+    <script src="/db/localstorage.js" defer></script>
+    <script src="/db/montaitenscheckout.js" defer></script>
+
+    <!-- Validação Campos Formulário -->
+    <script src="../scripts/validacaoform.js" defer></script>
+
+</body>
+
+</html>

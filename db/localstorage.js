@@ -16,7 +16,7 @@ function addProduto(lista) {
     }
 
     let temItem = false;
-    let id, idHtml, img, nome, qtde, qtdeHTML, valor, valorHTML;
+    let id, idHtml, img, nomeP, nome, qtde, qtdeHTML, valor, valorHTML;
     const itens = document.querySelector('.produto-compra').children;
     for (let index = 0; index < itens.length; index++) {
         const element = itens[index];
@@ -31,6 +31,7 @@ function addProduto(lista) {
                 idHtml = element.outerHTML
                 break;
             case 'nome':
+                nomeP = TrocaString(element.innerHTML, 'Óleo Essencial Manacá ', vazio);
                 nome = element.outerHTML
                 break;
             case 'qtde':
@@ -52,7 +53,7 @@ function addProduto(lista) {
             /*
             O método unshift() adiciona um ou mais elementos no início de um array e retorna o número de elementos (propriedade length) atualizado.
             */
-            lista.unshift({ 'id': id, 'idHTML': idHtml, 'imagem': img, 'nome': nome, 'qtde': qtde, 'qtdeHTML': qtdeHTML, 'valor': valor, 'valorHTML': valorHTML });
+            lista.unshift({ 'id': id, 'idHTML': idHtml, 'imagem': img, 'nomeP': nomeP, 'nome': nome, 'qtde': qtde, 'qtdeHTML': qtdeHTML, 'valor': valor, 'valorHTML': valorHTML });
             setLista(lista);
         }
     }
@@ -124,6 +125,14 @@ function deleteProduto(lista, autoId) {
     }
     // console.log(lista)
     setLista(lista);
+}
+
+/* Deleta TODOS os produtos o LocalStorage */
+function deletaListaProdutos() {
+    const localStorageLT = localStorage.getItem('manaca');;
+    if (localStorageLT.length > 0) {
+        localStorage.removeItem('manaca');
+    }
 }
 
 /* Salvando no localStorage */

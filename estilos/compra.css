@@ -40,6 +40,7 @@
 
 .secao4-div-card p {
     text-align: left;
+    font-size: 1.5rem;
 }
 
 .secao4-div-card:hover {
@@ -51,6 +52,7 @@
     width: 35%;
     height: auto;
     border-radius: 10px;
+    margin-bottom: 0.5rem;
 }
 
 .secao4-div-card h3 {

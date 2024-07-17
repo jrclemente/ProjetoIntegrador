@@ -90,7 +90,7 @@ if (!isEmptyObject(objProduto)) {
 
     // Cria um objeto para guardar as informações do subtotal/quantidade
     subtotalInfo = new Object();
-    subtotalInfo.valor = parseFloat(0)
+    subtotalInfo.valor = parseFloat(0);
 
     const cardProduto = MontaDadosCompra(objProduto);
 
@@ -440,7 +440,6 @@ function ObterElementosOutraPagina() {
 
 //#region  Processos de Fechar/Excluir Compra/Atualização Subtotal
 function FecharCompra() {
-    // alert('Voltar para Página Principal');
     location.href = '../../index.html';
 }
 
@@ -582,7 +581,8 @@ function GeraBtnFinalizar() {
     divFinalizacaoCompra.className = 'continuar-finalizar-compra';
     const btnContinuar = GeraBtnAcao('Continuar Comprando', 'continuar-comprado', '', tpAcaoBTN, 'Continuar', 'index.html');
     divFinalizacaoCompra.append(btnContinuar);
-    const btnFinalizar = GeraBtnAcao('Finalizar Compra', 'finalizar-compra', '', tpAcaoBTN, 'Finalizar', 'paginas/login.html');
+    // const btnFinalizar = GeraBtnAcao('Finalizar Compra', 'finalizar-compra', '', tpAcaoBTN, 'Finalizar', 'paginas/login.html');
+    const btnFinalizar = GeraBtnAcao('Finalizar Compra', 'finalizar-compra', '', tpAcaoBTN, 'Finalizar', 'paginas/checkoutscompras.html');
     divFinalizacaoCompra.append(btnFinalizar);
     return divFinalizacaoCompra;
 }

@@ -25,8 +25,10 @@ if ((buttonClose != null) && (typeof buttonClose != "undefined")) {
 
 window.addEventListener('keyup', (event) => {
     if (event.key == 'Escape') {
-        modal.close();
-        modal.style.display = 'none';
+        if ((modal != null) && (typeof modal != "undefined")) {
+            modal.close();
+            modal.style.display = 'none';
+        }
     }
 })
 
@@ -49,6 +51,8 @@ function GeraModal(titulo, mensagem, tipoMens) {
         case 2:
             elementMensagem.style.color = 'blue';
             break;
+        case 3:
+            break;
         default:
             break;
     }
@@ -65,7 +69,7 @@ function GeraBotao(modal) {
 }
 
 function AbrirPopUp(titulo, mensagem, tipoMens) {
-    GeraModal(titulo, mensagem, tipoMens);
+    GeraModal(titulo, mensagem, tipoMens)
     modal.style.display = 'flex';
     modal.showModal();
 }

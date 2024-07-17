@@ -51,13 +51,38 @@ body {
     margin-bottom: 10px;
 }
 
+.principal article {
+    font-size: 1.5rem;
+}
+
 .principal-apresentacao {
     text-align: center;
 }
 
+.subtitulo{
+    font-size: 2rem;
+    font-weight: bold;
+}
+/*  */
+.politicaPrivacidade {
+    font-size: 1.5rem;
+    margin-bottom: 10rem;
+}
+
 .politica-privacidade {
     margin-bottom: 10px;
+    font-size: 1.5rem
 }
+
+.termoUso{
+    font-size: 1.5rem;
+    margin-bottom: 10rem;
+}
+.termos-uso {
+    font-size: 1.5rem
+}
+
+/*  */
 
 /* Estilizando todos os links de âncora */
 a {

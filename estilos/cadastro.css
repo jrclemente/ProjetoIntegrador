@@ -1,13 +1,20 @@
 .cadastro {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     /*
     Verificar se tem uma forma de fazer com que página aumente de tamanho de forma automática. 
-    Pois, todas as vezes em que um campo tem o seu tamanho alterado, a altura da página tem que ser alterada.
+    Pois, todas as vezes em que um campo tem o seu tamanho alterado, a altura da página tem que ser alterada, para que o botão enviar possa ficar visível.
+    Portanto, não há mais necessidade de utilizar: height: 1850px
+    Esta situação foi resolvida incluido o seletor: enviar-cadastro
     */
-    height: 1850px;
+    /* height: 1850px; */
     font-size: 1.5rem;
+}
+
+.enviar-cadastro{
+    margin-top: 1rem;
+    margin-bottom: 12rem;
 }
 
 .img-cadastro {
@@ -133,7 +140,8 @@ Aplicação de estilo através do atributo de um elemento(tag)
 */
 input[type="submit"] {
     cursor: pointer;
-    background: rgb(61, 157, 179);
+    /* background: rgb(61, 157, 179); */
+    background-color: #04AA6D;
     padding: 8px 5px;
     color: #fff;
     font-size: 20px;
@@ -155,5 +163,6 @@ input[type="submit"] {
 
 /* Aplicação de estilo através do atributo de um elemento(tag) */
 input[type="submit"]:hover {
-    background: #4ab3c6;
+    /* background: #4ab3c6; */
+    background: rgba(9, 218, 30, 0.847);
 }

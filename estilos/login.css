@@ -75,7 +75,8 @@ Aplicação de estilo através do atributo de um elemento(tag)
 */
 input[type="submit"] {
     cursor: pointer;
-    background: rgb(61, 157, 179);
+    /* background: rgb(61, 157, 179); */
+    background-color: #04AA6D;
     color: #fff;
     font-size: 20px;
     border: 1px solid #fff;
@@ -96,5 +97,6 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: #4ab3c6;
+    /* background: #4ab3c6; */
+    background: rgba(9, 218, 30, 0.847);
 }

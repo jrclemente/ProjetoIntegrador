@@ -92,10 +92,12 @@ let itensValidacao = [
 ]
 //#endregion
 
-const vazio = '',
+const vaziO = '',
     traco = '-',
-    ponto = '.';
+    pontO = '.';
 let tituloModal;
+
+//#region Diversas Validações
 
 // Verifica valores repetidos sequencialmente
 const eRepetidos = function (str) {
@@ -121,13 +123,15 @@ function emailValido(email) {
 
 function CEPValido(event) {
     let cep = event.value;
-    cep = TrocaString(cep, traco, vazio);
+    cep = TrocaString(cep, traco, vaziO);
     if (eRepetidos(cep)) {
         formEndereco.cep_Cad.focus();
         tituloModal = 'CEP inválido!'
         AbrirPopUp(tituloModal, 'CEP não pode ter valores repetidos!', 1);
     }
 }
+//#endregion
+
 function MostraMensCampoObr(campoInput, label) {
     // Mostrar 'popup' de campo obrigatório
     campoInput.addEventListener('focus', function () {
@@ -254,6 +258,7 @@ function VerificaCPF(strCpf) {
 }
 //#endregion
 
+//#region  Valida Dados Cadastro
 function ValidaDados(event) {
     let required;
     let dadosValidos = true;
@@ -283,7 +288,7 @@ function ValidaDados(event) {
     let cpf = formCadastro.cpf_cad.value;
     // O ponto tem que ficar dentro dos colchetes para ele poder ser "escapado" pelo Regex
     const regex = /[.]/g;
-    cpf = TrocaString(TrocaString(cpf, regex, vazio), traco, vazio);
+    cpf = TrocaString(TrocaString(cpf, regex, vaziO), traco, vaziO);
     required = formCadastro.cpf_cad.required
     if (required) {
         if (cpf.trim() == "") {
@@ -437,7 +442,7 @@ function ValidaDados(event) {
 
     //#region  CEP
     let cep = formEndereco.cep_Cad.value;
-    cep = TrocaString(cep, traco, vazio);
+    cep = TrocaString(cep, traco, vaziO);
     required = formEndereco.cep_Cad.required
     if (required) {
         if (cep.trim() == "") {
@@ -678,6 +683,32 @@ function ValidaDados(event) {
 
     return dadosValidos;
 }
+//#endregion
+
+//#region Valida Dados Checkout Compras
+function ValidaDadosCheckout() {
+
+    let dadosCobrancaOK = true;
+
+    // const nomeCobr = formCobrCompras.nomeCobr.value.trim();
+    // const cpfCobr = formCobrCompras.cpfCobr.value.trim();
+    //  if ((nomeCobr == "") || (cpfCobr == "")) {
+    //     dadosCobrancaOK = false;
+    // }
+
+    /* Para não ter que recupera todos os campos do formulário - conforme exemplo acima - e verificar cada um individualmente */
+    let campos = [];
+    for (let index = 0; index < formCobrCompras.length; index++) {
+        const element = formCobrCompras[index];
+        const id = element.id;
+        if (id != 'btnSubmitCbr') {
+            campos.push(element.value)
+        }
+    }
+    /* O método some() é usado para verificar se pelo menos um elemento de um array satisfaz uma condição específica*/
+    return dadosCobrancaOK = !campos.some(item => item === vaziO);
+}
+//#endregion
 
 //#region Envio Dados do Cadastro
 const btnSubmit = document.getElementById("btnSubmit");
@@ -731,7 +762,7 @@ if ((btnSubmitLogin != null) && (typeof btnSubmitLogin != "undefined")) {
         let dadosLogingOK = true;
         const nomeLogin = formLogin.nome_login.value.trim();
         const senhaLogin = formLogin.senha_login.value.trim();
-        if ((nomeLogin == "") || (senhaLogin == "") ) {
+        if ((nomeLogin == "") || (senhaLogin == "")) {
             dadosLogingOK = false;
         }
         if (dadosLogingOK) {
@@ -743,6 +774,32 @@ if ((btnSubmitLogin != null) && (typeof btnSubmitLogin != "undefined")) {
             AbrirPopUp(tituloModal, 'Favor preencher o(s) campo(s) obrigatório(s) em destaque!', 1);
             event.preventDefault();
             // event.stopPropagation();
+        }
+    })
+}
+//#endregion
+
+//#region Finaliza Compras(Checkout)
+const btnSubmitCbr = document.getElementById("btnSubmitCbr");
+if ((btnSubmitCbr != null) && (typeof btnSubmitCbr != "undefined")) {
+    btnSubmitCbr.addEventListener('click', (event) => {
+        const dadosCobrancaOK = ValidaDadosCheckout();
+        // const nomeCobr = formCobrCompras.nomeCobr.value.trim();
+        // const cpfCobr = formCobrCompras.cpfCobr.value.trim();
+        // if ((nomeCobr == "") || (cpfCobr == "")) {
+        //     dadosCobrancaOK = false;
+        // }
+        if (dadosCobrancaOK) {
+            const nrProtocolo = ObtemNumeroProtocolo();
+            tituloModal = 'Finalização Compra'
+            AbrirPopUp(tituloModal, `Pagamento realizado com Sucesso! Número Protocolo: ${nrProtocolo}`, 2);
+            event.preventDefault();
+            deletaListaProdutos();
+            // location.href = '../../index.html';
+        } else {
+            tituloModal = 'Preenchimento de Campos!'
+            AbrirPopUp(tituloModal, 'Favor preencher o(s) campo(s) obrigatório(s) em destaque!', 1);
+            event.preventDefault();
         }
     })
 }
