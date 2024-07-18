@@ -4,6 +4,7 @@
     width: 50%;
     margin: auto;
     overflow: hidden;
+    z-index: -1;
 }
 
 .slider img {
