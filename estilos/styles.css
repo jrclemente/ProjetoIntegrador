@@ -8,6 +8,7 @@
     a dimensão de um elemento somando bordas e margens com altura e largura.
     */
     box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /*
@@ -25,7 +26,6 @@ html {
 }
 
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* Cores em degradê */
     background-color: #D8CE8F;
 }
@@ -53,6 +53,15 @@ body {
 
 .principal-apresentacao {
     text-align: center;
+    color: #191813;
+}
+
+.principal-apresentacao h1 {
+    font-size: 40px;
+}
+
+.principal-apresentacao article, p {
+    font-size: 20px;
 }
 
 .politica-privacidade {
@@ -82,6 +91,10 @@ footer {
     color: #fff;
     background-color: #191813;
     padding: 1rem;
+}
+
+footer p {
+    font-size: 1.2rem;
 }
 
 .rodaPe ul {

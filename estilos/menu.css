@@ -1,7 +1,6 @@
 header {
-    border: 1px solid rgba(9, 218, 30, 0.847);
     /* Para que as imagens possam ficar "escondidas" atras do menu */
-    background-image: linear-gradient(to right, #98c5e3, #1772d9);
+    background-color: #3F6D37;
 }
 
 header {

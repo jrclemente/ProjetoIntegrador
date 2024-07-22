@@ -22,9 +22,8 @@
     width: calc(100% / 3 - 60px);
     box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
     background-color: white;
-    border: 1px solid rgba(9, 218, 30, 0.847);
     border-radius: 15px;
-    margin: 10px;
+    margin: 15px;
     padding: 20px;
     transition: all 0.3s ease;
     cursor: pointer;
