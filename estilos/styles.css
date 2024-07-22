@@ -41,6 +41,7 @@ body {
 .politicaPrivacidade {
     /* Para que os itens fiquem abaixo do cabeçalho, quando este é definido como fixo(position: fixed) */
     padding-top: 170px;
+    color: #191813;
 }
 
 .principal {
@@ -56,13 +57,9 @@ body {
     color: #191813;
 }
 
-.principal-apresentacao h1 {
-    font-size: 40px;
-}
+.principal-apresentacao h1 {font-size: 40px;}
 
-.principal-apresentacao article, p {
-    font-size: 20px;
-}
+.principal-apresentacao article, p {font-size: 2rem;}
 
 .politica-privacidade {
     margin-bottom: 10px;
@@ -74,11 +71,38 @@ a {
     color: #fff;
 }
 
+.menu a:hover {
+    background-color: #265239;
+    padding: 0.5rem 1rem;
+    border: none;
+}
+
 a:hover { /* Contorno de links de âncora */
     color: white;
-    background-color: #1c87c9;
+    background-color: #73944C;
     border: 1px solid rgba(9, 218, 30, 0.847);
     border-radius: 5px;
+}
+
+.principal-sobre h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.principal-sobre h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+}
+
+.principal-sobre article {
+    font-size: 2rem;
+    text-align: justify;
+    margin: 0 25rem 0;
+}
+
+.principal-sobre h1, h2 {
+    margin: 0 25rem 0;
 }
 
 footer {
@@ -93,8 +117,9 @@ footer {
     padding: 1rem;
 }
 
-footer p {
+footer p { /* Linha referente aos Direitos Autorais do footer */
     font-size: 1.2rem;
+    margin-top: 0.5rem;
 }
 
 .rodaPe ul {
@@ -154,3 +179,9 @@ footer p {
     border-radius: 5px;
     padding: 1rem 2.6rem;
 }
+
+/*@media (max-width: 500px) {
+    .principal-sobre {
+        width: 100%;
+    }
+}*/
