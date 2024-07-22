@@ -1,6 +1,7 @@
 .slider {
     position: relative;
     display: flex;
+    justify-content: center;
     width: 100%; /* Tava em 50% antes */
     margin: auto;
     overflow: hidden;

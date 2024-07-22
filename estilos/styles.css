@@ -27,7 +27,8 @@ html {
 
 body {
     /* Cores em degradê */
-    background-color: #D8CE8F;
+    background: linear-gradient(to right, #E8E8CA, #D8CE8F);
+    /*background-color: #D8CE8F;*/
 }
 
 .principal,
