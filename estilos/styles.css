@@ -8,6 +8,7 @@
     a dimensão de um elemento somando bordas e margens com altura e largura.
     */
     box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /*
@@ -15,8 +16,8 @@ Define um controle de variável(var) a ser utilizado em vários elementos
 Este recurso permite que a manutenção das cores fique em um único lugar
 */
 :root {
-    --cor-primaria: #80808061;
-    --cor-segundaria: rgba(9, 218, 30, 0.847);
+    --cor-primaria: #7f807f61; /* botão de produto sem hover */
+    --cor-segundaria: rgba(63, 109, 55, 0.847); /* botão de produto com hover */
 }
 
 /* Define um valor da fonte padrão tendo com referência 16px */
@@ -27,7 +28,7 @@ html {
 body {
     font-family: 'Roboto', Arial, sans-serif;
     /* Cores em degradê */
-    background-image: linear-gradient(to right, #98c5e3, #1772d9);
+    background-color: #D8CE8F;
 }
 
 .principal,
@@ -65,7 +66,7 @@ a {
     color: #fff;
 }
 
-a:hover {
+a:hover { /* Contorno de links */
     color: white;
     background-color: #1c87c9;
     border: 1px solid rgba(9, 218, 30, 0.847);
@@ -80,8 +81,8 @@ footer {
     font-size: 1.2rem;
     text-align: center;
     color: #fff;
-    background-color: #010101;
-    border: 1px solid rgba(9, 218, 30, 0.847);
+    background-color: #191813;
+    /* border: 1px solid rgba(38, 82, 57, 0.847);       Não acredito ser necessário */
     padding: 1rem;
 }
 
